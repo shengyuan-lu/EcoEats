@@ -13,6 +13,9 @@
 		F43239CB2646DB3F0076C2B4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F43239CA2646DB3F0076C2B4 /* Preview Assets.xcassets */; };
 		F43239D72646DBA60076C2B4 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F43239D62646DBA60076C2B4 /* Launch Screen.storyboard */; };
 		F43239DD2646DE200076C2B4 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43239DC2646DE200076C2B4 /* LoginView.swift */; };
+		F4C826DB2646E32C00517A03 /* IntroductionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C826DA2646E32C00517A03 /* IntroductionView.swift */; };
+		F4C826DD2646E4F000517A03 /* HexColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C826DC2646E4F000517A03 /* HexColorExtension.swift */; };
+		F4C826DF2646F07100517A03 /* UIScreenExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C826DE2646F07100517A03 /* UIScreenExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		F43239CC2646DB3F0076C2B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F43239D62646DBA60076C2B4 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		F43239DC2646DE200076C2B4 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		F4C826DA2646E32C00517A03 /* IntroductionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionView.swift; sourceTree = "<group>"; };
+		F4C826DC2646E4F000517A03 /* HexColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexColorExtension.swift; sourceTree = "<group>"; };
+		F4C826DE2646F07100517A03 /* UIScreenExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScreenExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				F43239DC2646DE200076C2B4 /* LoginView.swift */,
+				F4C826DA2646E32C00517A03 /* IntroductionView.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -135,6 +142,8 @@
 		F43239DB2646DC1C0076C2B4 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				F4C826DC2646E4F000517A03 /* HexColorExtension.swift */,
+				F4C826DE2646F07100517A03 /* UIScreenExtension.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -210,7 +219,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F43239DD2646DE200076C2B4 /* LoginView.swift in Sources */,
+				F4C826DF2646F07100517A03 /* UIScreenExtension.swift in Sources */,
+				F4C826DD2646E4F000517A03 /* HexColorExtension.swift in Sources */,
 				F43239C62646DB3D0076C2B4 /* ContentView.swift in Sources */,
+				F4C826DB2646E32C00517A03 /* IntroductionView.swift in Sources */,
 				F43239C42646DB3D0076C2B4 /* EcoEatsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
