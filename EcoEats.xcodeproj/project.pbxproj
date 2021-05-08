@@ -9,7 +9,8 @@
 /* Begin PBXBuildFile section */
 		AFC254182646E8E300EE0470 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC254172646E8E300EE0470 /* Store.swift */; };
 		AFC2541C2646E8F100EE0470 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC2541B2646E8F100EE0470 /* Item.swift */; };
-		AFDF3ED02646E4E4003CDB52 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDF3ECF2646E4E4003CDB52 /* Data.swift */; };
+		AFC254202646EC9400EE0470 /* content.json in Resources */ = {isa = PBXBuildFile; fileRef = AFC2541F2646EC9400EE0470 /* content.json */; };
+		AFDF3ED02646E4E4003CDB52 /* DataApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDF3ECF2646E4E4003CDB52 /* DataApp.swift */; };
 		F43239C42646DB3D0076C2B4 /* EcoEatsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43239C32646DB3D0076C2B4 /* EcoEatsApp.swift */; };
 		F43239C62646DB3D0076C2B4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43239C52646DB3D0076C2B4 /* ContentView.swift */; };
 		F43239C82646DB3F0076C2B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F43239C72646DB3F0076C2B4 /* Assets.xcassets */; };
@@ -21,7 +22,8 @@
 /* Begin PBXFileReference section */
 		AFC254172646E8E300EE0470 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		AFC2541B2646E8F100EE0470 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
-		AFDF3ECF2646E4E4003CDB52 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		AFC2541F2646EC9400EE0470 /* content.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = content.json; sourceTree = "<group>"; };
+		AFDF3ECF2646E4E4003CDB52 /* DataApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataApp.swift; sourceTree = "<group>"; };
 		F43239C02646DB3D0076C2B4 /* EcoEats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EcoEats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F43239C32646DB3D0076C2B4 /* EcoEatsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EcoEatsApp.swift; sourceTree = "<group>"; };
 		F43239C52646DB3D0076C2B4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -104,7 +106,8 @@
 		F43239D42646DB850076C2B4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				AFDF3ECF2646E4E4003CDB52 /* Data.swift */,
+				AFC2541F2646EC9400EE0470 /* content.json */,
+				AFDF3ECF2646E4E4003CDB52 /* DataApp.swift */,
 				AFC254172646E8E300EE0470 /* Store.swift */,
 				AFC2541B2646E8F100EE0470 /* Item.swift */,
 			);
@@ -208,6 +211,7 @@
 				F43239D72646DBA60076C2B4 /* Launch Screen.storyboard in Resources */,
 				F43239CB2646DB3F0076C2B4 /* Preview Assets.xcassets in Resources */,
 				F43239C82646DB3F0076C2B4 /* Assets.xcassets in Resources */,
+				AFC254202646EC9400EE0470 /* content.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,7 +226,7 @@
 				F43239DD2646DE200076C2B4 /* LoginView.swift in Sources */,
 				F43239C62646DB3D0076C2B4 /* ContentView.swift in Sources */,
 				F43239C42646DB3D0076C2B4 /* EcoEatsApp.swift in Sources */,
-				AFDF3ED02646E4E4003CDB52 /* Data.swift in Sources */,
+				AFDF3ED02646E4E4003CDB52 /* DataApp.swift in Sources */,
 				AFC2541C2646E8F100EE0470 /* Item.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

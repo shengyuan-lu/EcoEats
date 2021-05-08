@@ -8,9 +8,10 @@
 import Foundation
 import Combine
 
-class Data : ObservableObject{
+class DataApp : ObservableObject{
     
-    
+    @Published var store : [Store] = [Store]()
+    @Published var cartItems : [Item] = [Item]()
     
     init(){
         startLoadingFromJSON();
@@ -28,20 +29,7 @@ class Data : ObservableObject{
     }
     
     /// Helper Method | Parse JSON Data
-    private func parseJSONData(_ data: Data) {
-//            var response: NewsApiResponse
-//            do {
-//                response = try JSONDecoder().decode(NewsApiResponse.self, from: data)
-//            } catch {
-//                print("Error parsing the API response: \(error)")
-//                return []
-//            }
-//
-//            if response.status != Constants.APIResponse.statusOK {
-//                print("API response status is not OK: \(response.status)")
-//                return []
-//            }
-//
-//            return response.articles ?? []
+    private func parseJSONData()  {
+
     }
 }
