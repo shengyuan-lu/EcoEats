@@ -6,7 +6,7 @@
 //
 
 import Foundation
-class Item : Decodable {
+struct Item : Codable {
     var icon : String?
     var name : String?
     var percentage : Int?

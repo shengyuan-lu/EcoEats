@@ -6,11 +6,11 @@
 //
 
 import Foundation
-class Store : Decodable  {
+struct Store  {
     var name : String?
     var time : String?
     var distances : Double?
-    var beverages : [Item] = [Item]()
-    var veggies : [Item] = [Item]()
-    var hygienes : [Item] = [Item]()
+    var beverages : [Item] = []
+    var veggies : [Item] = []
+    var hygienes : [Item] = []
 }

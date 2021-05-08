@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		93364858EA608ECFBC44C658 /* Pods_EcoEats.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B9A6B9FCE75930C13B3A437 /* Pods_EcoEats.framework */; };
 		AFC254182646E8E300EE0470 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC254172646E8E300EE0470 /* Store.swift */; };
 		AFC2541C2646E8F100EE0470 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC2541B2646E8F100EE0470 /* Item.swift */; };
 		AFC254202646EC9400EE0470 /* content.json in Resources */ = {isa = PBXBuildFile; fileRef = AFC2541F2646EC9400EE0470 /* content.json */; };
@@ -20,6 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		12C38A2927AF88CA9CCB60B4 /* Pods-EcoEats.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EcoEats.release.xcconfig"; path = "Target Support Files/Pods-EcoEats/Pods-EcoEats.release.xcconfig"; sourceTree = "<group>"; };
+		1384DD835792A57D5A477B70 /* Pods-EcoEats.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EcoEats.debug.xcconfig"; path = "Target Support Files/Pods-EcoEats/Pods-EcoEats.debug.xcconfig"; sourceTree = "<group>"; };
+		1B9A6B9FCE75930C13B3A437 /* Pods_EcoEats.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EcoEats.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFC254172646E8E300EE0470 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		AFC2541B2646E8F100EE0470 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		AFC2541F2646EC9400EE0470 /* content.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = content.json; sourceTree = "<group>"; };
@@ -39,17 +43,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93364858EA608ECFBC44C658 /* Pods_EcoEats.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		098C91C04B889DDA870E0A67 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1B9A6B9FCE75930C13B3A437 /* Pods_EcoEats.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BBB57624B558794D54CBCDCB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1384DD835792A57D5A477B70 /* Pods-EcoEats.debug.xcconfig */,
+				12C38A2927AF88CA9CCB60B4 /* Pods-EcoEats.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		F43239B72646DB3D0076C2B4 = {
 			isa = PBXGroup;
 			children = (
 				F43239C22646DB3D0076C2B4 /* EcoEats */,
 				F43239C12646DB3D0076C2B4 /* Products */,
+				BBB57624B558794D54CBCDCB /* Pods */,
+				098C91C04B889DDA870E0A67 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -158,9 +183,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F43239CF2646DB3F0076C2B4 /* Build configuration list for PBXNativeTarget "EcoEats" */;
 			buildPhases = (
+				F8B73981C46A7557C6A9D5F0 /* [CP] Check Pods Manifest.lock */,
 				F43239BC2646DB3D0076C2B4 /* Sources */,
 				F43239BD2646DB3D0076C2B4 /* Frameworks */,
 				F43239BE2646DB3D0076C2B4 /* Resources */,
+				5BE61470B38B3F9C1A0F6172 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -216,6 +243,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5BE61470B38B3F9C1A0F6172 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EcoEats/Pods-EcoEats-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EcoEats/Pods-EcoEats-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EcoEats/Pods-EcoEats-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F8B73981C46A7557C6A9D5F0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EcoEats-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F43239BC2646DB3D0076C2B4 /* Sources */ = {
@@ -352,6 +421,7 @@
 		};
 		F43239D02646DB3F0076C2B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1384DD835792A57D5A477B70 /* Pods-EcoEats.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -360,7 +430,7 @@
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = EcoEats/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -374,6 +444,7 @@
 		};
 		F43239D12646DB3F0076C2B4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12C38A2927AF88CA9CCB60B4 /* Pods-EcoEats.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -382,7 +453,7 @@
 				DEVELOPMENT_TEAM = WMFKF24VVS;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = EcoEats/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

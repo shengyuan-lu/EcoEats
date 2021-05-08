@@ -1,59 +1,51 @@
 {
-      "store" : [
-              {
-                  "name" : "Walmart",
-                  "time" : "Open 24 Hours",
-                  "distances" : "2 Miles",
-                  "beverages" : [
-                      {
-                          "icon" : "🌊",
-                          "name": "Water",
-                          "percentage" : 20,
-                          "quantity" : 50
-                      },
-                      {
-                          "icon" : "🥤",
-                          "name": "Juice",
-                          "percentage" : 69,
-                          "quantity" : 21
-                      }
-                  ],
-                  "veggies": [
-                      {
-                          "icon" : "🥕",
-                          "name": "Carrot",
-                          "percentage" : 21,
-                          "quantity" : 10
-                      },
-                      {
-                          "icon" : "🌽",
-                          "name": "Corn",
-                          "percentage" : 24,
-                          "quantity" : 10
-                      },
-                      {
-                          "icon" : "🧅",
-                          "name": "Onion",
-                          "percentage" : 14,
-                          "quantity" : 2
-                      }
-                  ],
-                  "hygienes" : [
-                      {
-                          "icon" : "🪥",
-                          "name": "Toothbrush",
-                          "percentage" : 11,
-                          "quantity" : 10
-                      }
-                  ]
-              }
-          ],
-      "cartItem" : [
-          {
-              "icon" : "🪥",
-              "name": "Toothbrush",
-              "percentage" : 11,
-              "quantity" : 10
-          }
+  "stores": [
+    {
+      "name": "Walmart",
+      "time": "Open 24 Hours",
+      "distances": "2 Miles",
+      "beverages": [
+        {
+          "icon": "🌊",
+          "name": "Water",
+          "percentage": 20,
+          "quantity": 50
+        },
+        {
+          "icon": "🥤",
+          "name": "Juice",
+          "percentage": 69,
+          "quantity": 21
+        }
+      ],
+      "veggies": [
+        {
+          "icon": "🥕",
+          "name": "Carrot",
+          "percentage": 21,
+          "quantity": 10
+        },
+        {
+          "icon": "🌽",
+          "name": "Corn",
+          "percentage": 24,
+          "quantity": 10
+        },
+        {
+          "icon": "🧅",
+          "name": "Onion",
+          "percentage": 14,
+          "quantity": 2
+        }
+      ],
+      "hygienes": [
+        {
+          "icon": "🪥",
+          "name": "Toothbrush",
+          "percentage": 11,
+          "quantity": 10
+        }
       ]
-  }
+    }
+  ]
+}
