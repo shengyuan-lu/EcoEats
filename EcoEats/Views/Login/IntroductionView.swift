@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+import UIKit
 
 
 struct IntroductionView: View {
@@ -28,9 +28,6 @@ struct IntroductionView: View {
         NavigationView {
             
             ZStack {
-                
-                Color.init(hex: "F8FBFF")
-                    .edgesIgnoringSafeArea(.all)
                 
                 VStack(alignment: .center) {
                     
@@ -54,7 +51,7 @@ struct IntroductionView: View {
                             .clipShape(RoundedRectangle(cornerRadius: 10))
                     }))
                     .onAppear(perform: {
-                        UIScrollView.appearance().bounces = false
+                        setUpAppearance()
                     })
                     
                     
@@ -87,13 +84,20 @@ struct IntroductionView: View {
                         
                         
                     }
-                    .padding(.top, 120)
+                    .padding(.top, 40)
                     
                 }
                 
             }
             
         }
+        
+    }
+    
+    func setUpAppearance() {
+        UIScrollView.appearance().bounces = false
+        UIPageControl.appearance().currentPageIndicatorTintColor = UIColor.black
+        UIPageControl.appearance().pageIndicatorTintColor = UIColor.black.withAlphaComponent(0.2)
     }
 }
 
@@ -112,9 +116,17 @@ struct introPagedView: View {
                 .fontWeight(.bold)
                 .foregroundColor(Color.init(hex: "54925A"))
             
-            Image(introPage.introImageStr)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
+            
+            ZStack {
+                Color.init(hex: "EDFFF3")
+                    .clipShape(RoundedRectangle(cornerRadius: 25))
+                
+                Image(introPage.introImageStr)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+            }
+            
+
             
         }
     }
