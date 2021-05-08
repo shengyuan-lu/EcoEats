@@ -12,11 +12,11 @@ import UIKit
 struct IntroductionView: View {
     
     @State private var introList = [
-        IntroPage(introText: "Find stores that offer contactless services (1/3)", introImageStr: "intro1", tag: 0),
+        IntroPage(introText: "Find local businesses that offer contactless services (1/3).", introImageStr: "intro1", tag: 0),
         
-        IntroPage(introText: "Choose from sustainably sourced options (2/3)", introImageStr: "intro2", tag: 1),
+        IntroPage(introText: "Choose from sustainably sourced goodies (2/3).", introImageStr: "intro2", tag: 1),
         
-        IntroPage(introText: "Fill out feedback surveys & earn points (3/3)", introImageStr: "intro3", tag: 2)
+        IntroPage(introText: "Earn points by purchasing and redeem gift cards (3/3).", introImageStr: "intro3", tag: 2)
     ]
     
     
@@ -29,7 +29,14 @@ struct IntroductionView: View {
             
             ZStack {
                 
-                VStack(alignment: .center) {
+                VStack(alignment: .leading) {
+                    
+                    
+                    Text(self.selectedTab == introList.count ? "Enter your details to start ordering food." : "An introduction and guided tour to EcoEats.")
+                        .foregroundColor(.secondary)
+                        .padding(.horizontal, 16)
+                    
+                    Divider()
                     
                     TabView(selection: $selectedTab) {
                         
@@ -39,52 +46,42 @@ struct IntroductionView: View {
                         }
                         .padding(.horizontal, 16)
                         
+                        LoginView()
+                            .tag(introList.count)
+                        
                     }
                     .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
-                    .navigationBarTitle(Text("EcoEats"))
+                    .navigationBarTitle(Text(self.selectedTab == introList.count ? "Signup or Login" : "Welcome"))
                     .navigationBarTitleDisplayMode(.large)
-                    .navigationBarItems(trailing: Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                        Text("Skip")
-                            .padding(10)
-                            .background(Color.init(hex: "54925A"))
-                            .foregroundColor(.white)
-                            .clipShape(RoundedRectangle(cornerRadius: 10))
-                    }))
+                    .navigationBarItems(trailing:
+                                            
+                                            Button(action: {
+                                                
+                                                self.selectedTab = introList.count
+                                                
+                                                
+                                            }, label: {
+                                                
+                                                HStack {
+                                                    
+                                                    Text("Skip")
+                                                    
+                                                    Image(systemName: "arrow.forward.circle.fill")
+                                                    
+                                                }
+                                                .padding(10)
+                                                .background(Color.init(hex: "54925A"))
+                                                .foregroundColor(.white)
+                                                .clipShape(RoundedRectangle(cornerRadius: 10))
+                                                
+                                            })
+                                            .opacity(self.selectedTab == introList.count ? 0.0 : 1.0)
+                                            .disabled(self.selectedTab == introList.count)
+                    
+                    )
                     .onAppear(perform: {
                         setUpAppearance()
                     })
-                    
-                    
-                    VStack(spacing: 10) {
-                        
-                        Button(action: {
-                            
-                        }, label: {
-                            
-                            Text("Create an account")
-                                .font(.title)
-                                .fontWeight(.bold)
-                                .padding(10)
-                                .padding(.horizontal, 40)
-                                .background(Color.init(hex: "54925A"))
-                                .foregroundColor(.white)
-                                .clipShape(RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*/25.0/*@END_MENU_TOKEN@*/))
-                        })
-                        
-                        Button(action: {
-                            
-                        }, label: {
-                            
-                            Text("Login")
-                                .font(.title2)
-                                .fontWeight(.regular)
-                                .padding(10)
-                                .foregroundColor(Color.init(hex: "54925A"))
-                        })
-                        
-                        
-                    }
-                    .padding(.top, 40)
                     
                 }
                 
@@ -126,7 +123,7 @@ struct introPagedView: View {
                     .aspectRatio(contentMode: .fit)
             }
             
-
+            
             
         }
     }
