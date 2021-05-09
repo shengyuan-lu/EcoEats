@@ -3,11 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		93364858EA608ECFBC44C658 /* Pods_EcoEats.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B9A6B9FCE75930C13B3A437 /* Pods_EcoEats.framework */; };
+		AF8E504C2647902A00B30B48 /* TabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8E504B2647902A00B30B48 /* TabController.swift */; };
+		AF8E50512647918F00B30B48 /* ShopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8E50502647918F00B30B48 /* ShopView.swift */; };
+		AF8E5055264791A500B30B48 /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8E5054264791A500B30B48 /* ItemView.swift */; };
+		AF8E5058264791C500B30B48 /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8E5057264791C500B30B48 /* CartView.swift */; };
+		AF8E505B264791E500B30B48 /* DeliveryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8E505A264791E500B30B48 /* DeliveryView.swift */; };
 		AFC254182646E8E300EE0470 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC254172646E8E300EE0470 /* Store.swift */; };
 		AFC2541C2646E8F100EE0470 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC2541B2646E8F100EE0470 /* Item.swift */; };
 		AFC254202646EC9400EE0470 /* content.json in Resources */ = {isa = PBXBuildFile; fileRef = AFC2541F2646EC9400EE0470 /* content.json */; };
@@ -27,6 +32,11 @@
 		12C38A2927AF88CA9CCB60B4 /* Pods-EcoEats.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EcoEats.release.xcconfig"; path = "Target Support Files/Pods-EcoEats/Pods-EcoEats.release.xcconfig"; sourceTree = "<group>"; };
 		1384DD835792A57D5A477B70 /* Pods-EcoEats.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EcoEats.debug.xcconfig"; path = "Target Support Files/Pods-EcoEats/Pods-EcoEats.debug.xcconfig"; sourceTree = "<group>"; };
 		1B9A6B9FCE75930C13B3A437 /* Pods_EcoEats.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EcoEats.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF8E504B2647902A00B30B48 /* TabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabController.swift; sourceTree = "<group>"; };
+		AF8E50502647918F00B30B48 /* ShopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopView.swift; sourceTree = "<group>"; };
+		AF8E5054264791A500B30B48 /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
+		AF8E5057264791C500B30B48 /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
+		AF8E505A264791E500B30B48 /* DeliveryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryView.swift; sourceTree = "<group>"; };
 		AFC254172646E8E300EE0470 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		AFC2541B2646E8F100EE0470 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		AFC2541F2646EC9400EE0470 /* content.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = content.json; sourceTree = "<group>"; };
@@ -64,13 +74,64 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		AF8E504A2647901500B30B48 /* Shop */ = {
+			isa = PBXGroup;
+			children = (
+				AF8E50612647923C00B30B48 /* ShopView */,
+				AF8E505F2647920B00B30B48 /* CartView */,
+				AF8E505E264791FF00B30B48 /* ItemView */,
+				AF8E50602647921E00B30B48 /* DeliveryView */,
+				AF8E504F2647909A00B30B48 /* TabController */,
+			);
+			path = Shop;
+			sourceTree = "<group>";
+		};
+		AF8E504F2647909A00B30B48 /* TabController */ = {
+			isa = PBXGroup;
+			children = (
+				AF8E504B2647902A00B30B48 /* TabController.swift */,
+			);
+			path = TabController;
+			sourceTree = "<group>";
+		};
+		AF8E505E264791FF00B30B48 /* ItemView */ = {
+			isa = PBXGroup;
+			children = (
+				AF8E5054264791A500B30B48 /* ItemView.swift */,
+			);
+			path = ItemView;
+			sourceTree = "<group>";
+		};
+		AF8E505F2647920B00B30B48 /* CartView */ = {
+			isa = PBXGroup;
+			children = (
+				AF8E5057264791C500B30B48 /* CartView.swift */,
+			);
+			path = CartView;
+			sourceTree = "<group>";
+		};
+		AF8E50602647921E00B30B48 /* DeliveryView */ = {
+			isa = PBXGroup;
+			children = (
+				AF8E505A264791E500B30B48 /* DeliveryView.swift */,
+			);
+			path = DeliveryView;
+			sourceTree = "<group>";
+		};
+		AF8E50612647923C00B30B48 /* ShopView */ = {
+			isa = PBXGroup;
+			children = (
+				AF8E50502647918F00B30B48 /* ShopView.swift */,
+			);
+			path = ShopView;
+			sourceTree = "<group>";
+		};
 		BBB57624B558794D54CBCDCB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				1384DD835792A57D5A477B70 /* Pods-EcoEats.debug.xcconfig */,
 				12C38A2927AF88CA9CCB60B4 /* Pods-EcoEats.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -119,9 +180,9 @@
 		F43239D22646DB620076C2B4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AF8E504A2647901500B30B48 /* Shop */,
 				F43239C52646DB3D0076C2B4 /* ContentView.swift */,
 				F43239D92646DC0C0076C2B4 /* Login */,
-				F43239DA2646DC110076C2B4 /* Shop */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -167,13 +228,6 @@
 				F4C826DA2646E32C00517A03 /* IntroductionView.swift */,
 			);
 			path = Login;
-			sourceTree = "<group>";
-		};
-		F43239DA2646DC110076C2B4 /* Shop */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Shop;
 			sourceTree = "<group>";
 		};
 		F43239DB2646DC1C0076C2B4 /* Helpers */ = {
@@ -302,12 +356,17 @@
 			files = (
 				AFC254182646E8E300EE0470 /* Store.swift in Sources */,
 				F43239DD2646DE200076C2B4 /* LoginView.swift in Sources */,
+				AF8E5058264791C500B30B48 /* CartView.swift in Sources */,
 				F4C826DF2646F07100517A03 /* UIScreenExtension.swift in Sources */,
 				F4C826DD2646E4F000517A03 /* HexColorExtension.swift in Sources */,
 				F43239C62646DB3D0076C2B4 /* ContentView.swift in Sources */,
+				AF8E504C2647902A00B30B48 /* TabController.swift in Sources */,
 				F4C826DB2646E32C00517A03 /* IntroductionView.swift in Sources */,
+				AF8E505B264791E500B30B48 /* DeliveryView.swift in Sources */,
+				AF8E5055264791A500B30B48 /* ItemView.swift in Sources */,
 				F43239C42646DB3D0076C2B4 /* EcoEatsApp.swift in Sources */,
 				AFDF3ED02646E4E4003CDB52 /* DataApp.swift in Sources */,
+				AF8E50512647918F00B30B48 /* ShopView.swift in Sources */,
 				AFC2541C2646E8F100EE0470 /* Item.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
