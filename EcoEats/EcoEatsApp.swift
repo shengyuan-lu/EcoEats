@@ -12,7 +12,7 @@ struct EcoEatsApp: App {
     @StateObject var data : DataApp = DataApp()
     var body: some Scene {
         WindowGroup {
-            TabController()
+            ItemView()
                 .environmentObject(data)
         }
     }

@@ -94,6 +94,7 @@ struct ItemView: View {
                             }).padding(.top,88)
                 
                 )
+                
         }
     }
 }

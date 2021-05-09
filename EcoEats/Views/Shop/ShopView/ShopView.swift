@@ -23,7 +23,6 @@ struct ShopView: View {
                         }
                         Image("24Hr")
                     }
-                    
                 }
             }.navigationBarTitle(Text("Nearest Store"))
         }

@@ -9,20 +9,25 @@ import SwiftUI
 
 struct ItemCard: View {
     @State var item : Item
+    @State var showingSheet : Bool = false;
     var body: some View {
-        VStack(alignment: .center) {
-            Image(uiImage: item.icon!.image()!)
-                .clipped()
-                .shadow(color: Color.gray, radius: 10, x: 0, y: 0)
-            Text(item.name!)
-                .bold()
-                .lineLimit(5)
-                .font(.subheadline)
-                .foregroundColor(.black)
-        }
-        .frame(width: 155)
-        .padding(.leading, 15)
-        
+        Button(action: {showingSheet = true}, label: {
+            VStack(alignment: .center) {
+                Image(uiImage: item.icon!.image(size: 60)!)
+                    .clipped()
+                    .shadow(color: Color.gray, radius: 10, x: 0, y: 0)
+                Text(item.name!)
+                    .bold()
+                    .lineLimit(5)
+                    .font(.subheadline)
+                    .foregroundColor(.black)
+            }
+            .frame(width: 155)
+            .padding(.leading, 15)
+            .sheet(isPresented: $showingSheet, content: {
+                ItemInfo(item: item, isPresented: $showingSheet)
+            })
+        })
     }
 }
 
@@ -33,9 +38,9 @@ struct ItemCard_Previews: PreviewProvider {
 }
 
 extension String {
-    func image() -> UIImage? {
+    func image(size : Int) -> UIImage? {
         let nsString = (self as NSString)
-                let font = UIFont.systemFont(ofSize: 60) // you can change your font size here
+        let font = UIFont.systemFont(ofSize: CGFloat(size)) // you can change your font size here
                 let stringAttributes = [NSAttributedString.Key.font: font]
                 let imageSize = nsString.size(withAttributes: stringAttributes)
 
@@ -48,4 +53,6 @@ extension String {
     
                 return image ?? UIImage()
     }
+    
+    
 }

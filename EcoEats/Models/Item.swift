@@ -12,4 +12,5 @@ struct Item : Codable,Identifiable {
     var name : String?
     var percentage : Int?
     var quanity : Int?
+    var price : Double?
 }
