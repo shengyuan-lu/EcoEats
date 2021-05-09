@@ -32,6 +32,7 @@
 		F4DAA006264802F6006385C3 /* CartViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DAA005264802F6006385C3 /* CartViewCell.swift */; };
 		F4DAA00826480923006385C3 /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DAA00726480923006385C3 /* CartView.swift */; };
 		F4DAA00A2648125A006385C3 /* CheckoutSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DAA0092648125A006385C3 /* CheckoutSuccessView.swift */; };
+		F4DAA01026482D0A006385C3 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = F4DAA00F26482D0A006385C3 /* SwiftUICharts */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4DAA01026482D0A006385C3 /* SwiftUICharts in Frameworks */,
 				93364858EA608ECFBC44C658 /* Pods_EcoEats.framework in Frameworks */,
 				F41E38142647E684000EEB6A /* BottomSheet in Frameworks */,
 			);
@@ -212,11 +214,11 @@
 			isa = PBXGroup;
 			children = (
 				F4C826E02647920D00517A03 /* MainAppView.swift */,
-				F4C826E42647AA9C00517A03 /* OverView.swift */,
-				F42587252647BCF500023A39 /* ShopMapView.swift */,
+				F4DAA00C264829E8006385C3 /* OverView */,
+				F4DAA00D264829F4006385C3 /* ShopMapView */,
+				F41E38232647F5F9000EEB6A /* ItemView */,
 				F4DAA00B26481ACA006385C3 /* Cart */,
 				F41E38182647F15F000EEB6A /* Profile */,
-				F41E38232647F5F9000EEB6A /* ItemView */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -240,6 +242,22 @@
 			path = Cart;
 			sourceTree = "<group>";
 		};
+		F4DAA00C264829E8006385C3 /* OverView */ = {
+			isa = PBXGroup;
+			children = (
+				F4C826E42647AA9C00517A03 /* OverView.swift */,
+			);
+			path = OverView;
+			sourceTree = "<group>";
+		};
+		F4DAA00D264829F4006385C3 /* ShopMapView */ = {
+			isa = PBXGroup;
+			children = (
+				F42587252647BCF500023A39 /* ShopMapView.swift */,
+			);
+			path = ShopMapView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -260,6 +278,7 @@
 			name = EcoEats;
 			packageProductDependencies = (
 				F41E38132647E684000EEB6A /* BottomSheet */,
+				F4DAA00F26482D0A006385C3 /* SwiftUICharts */,
 			);
 			productName = EcoEats;
 			productReference = F43239C02646DB3D0076C2B4 /* EcoEats.app */;
@@ -290,6 +309,7 @@
 			mainGroup = F43239B72646DB3D0076C2B4;
 			packageReferences = (
 				F41E38122647E684000EEB6A /* XCRemoteSwiftPackageReference "BottomSheet" */,
+				F4DAA00E26482D0A006385C3 /* XCRemoteSwiftPackageReference "ChartView" */,
 			);
 			productRefGroup = F43239C12646DB3D0076C2B4 /* Products */;
 			projectDirPath = "";
@@ -580,6 +600,14 @@
 				minimumVersion = 1.0.7;
 			};
 		};
+		F4DAA00E26482D0A006385C3 /* XCRemoteSwiftPackageReference "ChartView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppPear/ChartView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.5;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -587,6 +615,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = F41E38122647E684000EEB6A /* XCRemoteSwiftPackageReference "BottomSheet" */;
 			productName = BottomSheet;
+		};
+		F4DAA00F26482D0A006385C3 /* SwiftUICharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F4DAA00E26482D0A006385C3 /* XCRemoteSwiftPackageReference "ChartView" */;
+			productName = SwiftUICharts;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
