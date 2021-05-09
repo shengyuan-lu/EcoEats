@@ -17,7 +17,12 @@ struct MainShopView: View {
             
             PromoView(isLoggedin: $isLoggedin)
                 .tabItem {
-                    Label("Overview", image: "ecology-leaf")
+                    Label("Get Started", image: "ecology-leaf")
+                }
+            
+            ShopView()
+                .tabItem {
+                    Label("Shop", image: "shop")
                 }
             
         }

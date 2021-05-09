@@ -12,7 +12,7 @@ import UIKit
 struct IntroductionView: View {
     
     @State private var introList = [
-        IntroPage(introText: "Find local businesses that offer contactless services (1/3).", introImageStr: "intro1", tag: 0),
+        IntroPage(introText: "Support local businesses that offer contactless services (1/3).", introImageStr: "intro1", tag: 0),
         
         IntroPage(introText: "Choose from sustainably sourced goodies (2/3).", introImageStr: "intro2", tag: 1),
         
