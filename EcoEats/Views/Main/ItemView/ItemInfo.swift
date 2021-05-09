@@ -60,16 +60,20 @@ struct ItemInfo: View {
                 .navigationBarTitle(Text("\(item.name!)"))
                 
                 HStack {
+                    
                     Button(action: {
                         isPresented = false;
+                        
                     }, label: {
+                        
                         HStack {
                             Text("Cancel")
                             
                             Image(systemName: "xmark.circle.fill")
                             
                         }
-                        .font(.title2)
+                        .font(.title3)
+                        .frame(minWidth: 0, maxWidth: .infinity)
                         .padding(16)
                         .background(Color.init(hex: "CC0000"))
                         .foregroundColor(.white)
@@ -91,7 +95,8 @@ struct ItemInfo: View {
                             Image(systemName: "cart.badge.plus")
                             
                         }
-                        .font(.title2)
+                        .font(.title3)
+                        .frame(minWidth: 0, maxWidth: .infinity)
                         .padding(16)
                         .background(Color.init(hex: "54925A"))
                         .foregroundColor(.white)

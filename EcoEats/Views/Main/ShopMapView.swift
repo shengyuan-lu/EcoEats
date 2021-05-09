@@ -19,7 +19,7 @@ struct ShopMapView: View {
             
             VStack(alignment: .leading) {
                 
-                Text("Locate a EcoEats partnered Store.")
+                Text("Locate a EcoEats partnered store.")
                     .foregroundColor(.secondary)
                     .padding(.horizontal, 16)
                 
@@ -71,6 +71,9 @@ struct MapView: View {
     
     @State var bottomSheetPosition: BottomSheetPosition = BottomSheetPosition.hidden
     
+    @State var selectedShopName: String = ""
+    @State var selectedShopImage: String = ""
+    
     private var poi = [
         AnnotatedItem(name: "VegiMart", coordinate: CLLocationCoordinate2D(latitude: 33.6570, longitude: -117.8016)),
         AnnotatedItem(name: "HMart Irvine", coordinate: CLLocationCoordinate2D(latitude: 33.6570, longitude: -117.8316)),
@@ -90,6 +93,8 @@ struct MapView: View {
                         Button(action: {
                             
                             self.bottomSheetPosition = BottomSheetPosition.middle
+                            self.selectedShopName = item.name
+                            self.selectedShopImage = item.name
                             
                         }, label: {
                             
@@ -130,24 +135,21 @@ struct MapView: View {
                 
             }
             .bottomSheet(bottomSheetPosition: $bottomSheetPosition) {
-                ItemView()
+                
+                ItemView(storeName: $selectedShopName, storeImageName: $selectedShopImage)
                     .padding()
             }
             .onAppear {
                 manager.delegate = managerDelegate
             }
-            
-            
 
         }
-        
-        
     }
 }
 
 class LocationDelegate: NSObject, ObservableObject, CLLocationManagerDelegate {
     
-    @Published var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 33.6846, longitude: -117.8265), span: MKCoordinateSpan(latitudeDelta: 0.09, longitudeDelta: 0.09))
+    @Published var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 33.6846, longitude: -117.8265), span: MKCoordinateSpan(latitudeDelta: 0.08, longitudeDelta: 0.08))
     
     var updateCount = 0
     

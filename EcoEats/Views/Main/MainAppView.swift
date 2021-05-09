@@ -17,7 +17,7 @@ struct MainAppView: View {
         
         TabView(selection: $tabSelection)  {
             
-            OverView(isLoggedin: $isLoggedin, tabSelection: $tabSelection)
+            OverView(tabSelection: $tabSelection)
                 .tag(0)
                 .tabItem {
                     Label("Get Started", image: "ecology-leaf")
@@ -29,7 +29,7 @@ struct MainAppView: View {
                     Label("Shop", image: "shop")
                 }
             
-            ProfileView()
+            ProfileView(isLoggedin: $isLoggedin)
                 .tag(2)
                 .tabItem {
                     Label("Profile", systemImage: "person.crop.circle.fill")

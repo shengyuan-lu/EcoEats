@@ -9,8 +9,6 @@ import SwiftUI
 
 struct OverView: View {
     
-    @Binding var isLoggedin: Bool
-    
     @Binding var tabSelection: Int
     
     var body: some View {
@@ -33,7 +31,6 @@ struct OverView: View {
                             .font(.title2)
                             .fontWeight(.bold)
                             .foregroundColor(Color.init(hex: "54925A"))
-                        
                         
                         Text("Make your order online and we'll prepare it. Then you can come and pick it up contactlessly.")
                             .foregroundColor(.secondary)
@@ -184,25 +181,6 @@ struct OverView: View {
             }
             .navigationBarTitle(Text("Overview"))
             .navigationBarTitleDisplayMode(.large)
-            .navigationBarItems(trailing:
-                                    
-                                    Button(action: {
-                                        self.isLoggedin = false
-                                        
-                                    }, label: {
-                                        
-                                        HStack {
-                                            
-                                            Text("Logout")
-                                            
-                                            Image(systemName: "arrow.forward.circle.fill")
-                                            
-                                        }
-                                        .padding(10)
-                                        .foregroundColor(Color.init(hex: "54925A"))
-                                        
-                                    })
-            )
             
             
         }
@@ -214,6 +192,6 @@ struct OverView: View {
 
 struct OverView_Previews: PreviewProvider {
     static var previews: some View {
-        OverView(isLoggedin: .constant(true), tabSelection: .constant(0))
+        OverView(tabSelection: .constant(0))
     }
 }

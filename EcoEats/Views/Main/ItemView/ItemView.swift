@@ -11,11 +11,32 @@ struct ItemView: View {
     @State var storeIndex : Int = 0
     @EnvironmentObject var data : DataApp
     
+    @Binding var storeName: String
+    @Binding var storeImageName: String
+    
     var body: some View {
         
         VStack{
             
             ScrollView(showsIndicators: false) {
+                
+                
+                VStack {
+                    
+                    Image(storeImageName)
+                        .resizable()
+                        .frame(width: 50, height: 50)
+                    
+                    Text("\(storeName)")
+                        .font(.title2)
+                        .fontWeight(.bold)
+                        .foregroundColor(Color.init(hex: "54925A"))
+                        .lineLimit(2)
+                    
+                }
+                
+                Divider()
+                
 
                 VStack(alignment: .leading) {
                     VStack(alignment: .leading){
@@ -94,7 +115,7 @@ struct ItemView: View {
     struct ItemView_Previews: PreviewProvider {
         
         static var previews: some View {
-            ItemView(storeIndex : 0)
+            ItemView(storeIndex: 0, storeName: .constant("FreshMart"), storeImageName: .constant("FreshMart"))
                 .environmentObject(DataApp())
         }
     }
