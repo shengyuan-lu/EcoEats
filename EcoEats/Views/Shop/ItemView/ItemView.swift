@@ -74,13 +74,13 @@ struct ItemView: View {
                                 }.padding(.horizontal, -50)
                             }
                         }
-                        
-                        Spacer(minLength: 120)
+                        Spacer(minLength: 70)
                 }
             }.navigationBarTitle(Text("Items for Sale"))
               .navigationBarItems(trailing:
                             Button(action: {
                             }, label: {
+                                NavigationLink(destination: ShopView()){
                                     HStack {
                                         Text("Next")
                                         Image(systemName: "arrow.forward.circle.fill")
@@ -90,6 +90,7 @@ struct ItemView: View {
                                             .background(Color.init(hex: "54925A"))
                                             .foregroundColor(.white)
                                             .clipShape(RoundedRectangle(cornerRadius: 10))
+                                }
                                             
                             }).padding(.top,88)
                 

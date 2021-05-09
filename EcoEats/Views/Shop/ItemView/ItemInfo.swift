@@ -12,7 +12,7 @@ struct ItemInfo: View {
     @Binding var isPresented : Bool
     @EnvironmentObject var dataApp : DataApp
     var body: some View {
-        NavigationView {
+        NavigationView  {
             VStack(alignment: .center){
                 Image(uiImage: item.icon!.image(size: 200)!)
                 List{
