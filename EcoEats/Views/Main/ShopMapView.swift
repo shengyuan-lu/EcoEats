@@ -9,11 +9,9 @@ import SwiftUI
 import MapKit
 import BottomSheet
 
-struct ShopView: View {
+struct ShopMapView: View {
     
     @State private var showCartView: Bool = false
-    
-    @Binding var selectionIndex: Int
     
     var body: some View {
         
@@ -182,8 +180,8 @@ struct AnnotatedItem: Identifiable {
     var coordinate: CLLocationCoordinate2D
 }
 
-struct ShopView_Previews: PreviewProvider {
+struct ShopMapView_Previews: PreviewProvider {
     static var previews: some View {
-        ShopView(selectionIndex: .constant(0))
+        ShopMapView()
     }
 }

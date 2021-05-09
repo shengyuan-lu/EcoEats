@@ -11,6 +11,8 @@ struct PromoView: View {
     
     @Binding var isLoggedin: Bool
     
+    @Binding var tabSelection: Int
+    
     var body: some View {
         
         NavigationView {
@@ -47,6 +49,8 @@ struct PromoView: View {
                         }
                         
                         Button(action: {
+                            
+                            self.tabSelection = 1
                             
                         }, label: {
                             
@@ -89,6 +93,9 @@ struct PromoView: View {
                         
                         Button(action: {
                             
+                            self.tabSelection = 1
+                            
+                            
                         }, label: {
                             
                             Text("Find Sustainable Options")
@@ -130,6 +137,9 @@ struct PromoView: View {
                         }
                         
                         Button(action: {
+                            
+                            self.tabSelection = 1
+                            
                             
                         }, label: {
                             
@@ -183,6 +193,6 @@ struct PromoView: View {
 
 struct PromoView_Previews: PreviewProvider {
     static var previews: some View {
-        PromoView(isLoggedin: .constant(true))
+        PromoView(isLoggedin: .constant(true), tabSelection: .constant(0))
     }
 }

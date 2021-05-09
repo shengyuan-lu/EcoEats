@@ -18,7 +18,7 @@ struct MainView: View {
     var body: some View {
         
         if isLoggedin {
-            MainShopView(isLoggedin: $isLoggedin)
+            MainAppView(isLoggedin: $isLoggedin)
                 .onChange(of: isLoggedin, perform: { value in
                     self.selectedTabIndex = 3
                 })

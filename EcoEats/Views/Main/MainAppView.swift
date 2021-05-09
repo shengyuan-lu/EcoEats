@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MainShopView: View {
+struct MainAppView: View {
     
     @Binding var isLoggedin:Bool
     
@@ -17,13 +17,13 @@ struct MainShopView: View {
         
         TabView(selection: $tabSelection)  {
             
-            PromoView(isLoggedin: $isLoggedin)
+            PromoView(isLoggedin: $isLoggedin, tabSelection: $tabSelection)
                 .tag(0)
                 .tabItem {
                     Label("Get Started", image: "ecology-leaf")
                 }
             
-            ShopView(selectionIndex: $tabSelection)
+            ShopMapView()
                 .tag(1)
                 .tabItem {
                     Label("Shop", image: "shop")
@@ -45,8 +45,8 @@ struct MainShopView: View {
     
 }
 
-struct ShopViewMain_Previews: PreviewProvider {
+struct MainAppView_Previews: PreviewProvider {
     static var previews: some View {
-        MainShopView(isLoggedin: .constant(true))
+        MainAppView(isLoggedin: .constant(true))
     }
 }
