@@ -46,14 +46,14 @@ struct LoginView: View {
                         
                     }
                     
-                    TextField("Enter your email address...", text: $email) {
-                        UIApplication.shared.endEditing()
-                    }
-                    .keyboardType(.emailAddress)
-                    .padding(10)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 8)
-                            .stroke(Color.secondary, lineWidth: 1))
+                    TextField("Enter your email address...", text: $email)
+                        .keyboardType(.emailAddress)
+                        .padding(10)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 8)
+                                .stroke(Color.secondary, lineWidth: 2))
+                        .background(Color.white)
+                        .environment(\.colorScheme, .light)
                     
                     HStack {
                         
@@ -66,14 +66,15 @@ struct LoginView: View {
                         
                     }
                     
-                    SecureField("Enter your password...", text: $password) {
-                        UIApplication.shared.endEditing()
-                    }
-                    .keyboardType(.default)
-                    .padding(10)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 8)
-                            .stroke(Color.secondary, lineWidth: 1))
+                    SecureField("Enter your password...", text: $password)
+                        .keyboardType(.default)
+                        .padding(10)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 8)
+                                .stroke(Color.secondary, lineWidth: 2)
+                        )
+                        .background(Color.white)
+                        .environment(\.colorScheme, .light)
                 }
                 .padding()
                 .padding(.horizontal, 10)
@@ -83,14 +84,13 @@ struct LoginView: View {
                 VStack(alignment: .center, spacing: 20) {
                     
                     Button(action: {
-                        
                         performAccCreation()
                         
                     }, label: {
                         
                         Text("Create an account")
                             .font(.title)
-                            .fontWeight(.bold)
+                            .fontWeight(.regular)
                             .padding(10)
                             .frame(maxWidth: .infinity)
                             .background(Color.init(hex: "54925A"))
@@ -98,18 +98,17 @@ struct LoginView: View {
                             .clipShape(RoundedRectangle(cornerRadius: 20))
                     })
                     .alert(isPresented: $showCantCreateAccAlert) {
-                        Alert(title: Text("Can't create your account"), message: Text("Email or password field empty!"), dismissButton: .cancel())
+                        Alert(title: Text("Can't create your account"), message: Text("Email or password field is empty!"), dismissButton: .cancel())
                     }
                     
                     Button(action: {
-                        
                         performLogin()
                         
                     }, label: {
                         
                         Text("Login")
                             .font(.title2)
-                            .fontWeight(.semibold)
+                            .fontWeight(.regular)
                             .padding(10)
                             .frame(maxWidth: .infinity)
                             .foregroundColor(Color.init(hex: "54925A"))
@@ -117,12 +116,13 @@ struct LoginView: View {
                                 RoundedRectangle(cornerRadius: 20)
                                     .stroke(Color.init(hex: "54925A"), lineWidth: 3))
                     })
+                    .alert(isPresented: $showCantLogInAlert) {
+                        Alert(title: Text("Incorrect Credentials"), message: Text("Check your email and password!"), dismissButton: .cancel())
+                    }
                     
                 }
                 .padding(30)
-                .alert(isPresented: $showCantLogInAlert) {
-                    Alert(title: Text("Incorrect Credentials"), message: Text("Check your email and password!"), dismissButton: .cancel())
-                }
+
             }
         }
         .onTapGesture {

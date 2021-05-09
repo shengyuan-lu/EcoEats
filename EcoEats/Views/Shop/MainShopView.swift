@@ -12,15 +12,20 @@ struct MainShopView: View {
     @Binding var isLoggedin:Bool
     
     var body: some View {
-        Text("Shopview here")
         
-        Button(action: {
+        TabView {
             
-            self.isLoggedin = false
+            PromoView(isLoggedin: $isLoggedin)
+                .tabItem {
+                    Label("Overview", image: "ecology-leaf")
+                }
             
-        }, label: {
-            Text("Log out")
+        }
+        .onAppear(perform: {
+            UIScrollView.appearance().bounces = true
         })
+        .accentColor(Color.init(hex: "54925A"))
+        
     }
     
 }

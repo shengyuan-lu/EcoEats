@@ -22,6 +22,7 @@
 		F4C826DD2646E4F000517A03 /* HexColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C826DC2646E4F000517A03 /* HexColorExtension.swift */; };
 		F4C826DF2646F07100517A03 /* UIScreenExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C826DE2646F07100517A03 /* UIScreenExtension.swift */; };
 		F4C826E12647920D00517A03 /* MainShopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C826E02647920D00517A03 /* MainShopView.swift */; };
+		F4C826E52647AA9C00517A03 /* PromoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C826E42647AA9C00517A03 /* PromoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		F4C826DC2646E4F000517A03 /* HexColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexColorExtension.swift; sourceTree = "<group>"; };
 		F4C826DE2646F07100517A03 /* UIScreenExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScreenExtension.swift; sourceTree = "<group>"; };
 		F4C826E02647920D00517A03 /* MainShopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainShopView.swift; sourceTree = "<group>"; };
+		F4C826E42647AA9C00517A03 /* PromoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				F4C826E02647920D00517A03 /* MainShopView.swift */,
+				F4C826E42647AA9C00517A03 /* PromoView.swift */,
 			);
 			path = Shop;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 				F43239DD2646DE200076C2B4 /* LoginView.swift in Sources */,
 				F4C826DF2646F07100517A03 /* UIScreenExtension.swift in Sources */,
 				F4C826DD2646E4F000517A03 /* HexColorExtension.swift in Sources */,
+				F4C826E52647AA9C00517A03 /* PromoView.swift in Sources */,
 				F43239C62646DB3D0076C2B4 /* MainView.swift in Sources */,
 				F4C826DB2646E32C00517A03 /* IntroductionView.swift in Sources */,
 				F43239C42646DB3D0076C2B4 /* EcoEatsApp.swift in Sources */,
