@@ -29,6 +29,12 @@ struct MainShopView: View {
                     Label("Shop", image: "shop")
                 }
             
+            ProfileView()
+                .tag(2)
+                .tabItem {
+                    Label("Profile", systemImage: "person.crop.circle.fill")
+                }
+            
         }
         .onAppear(perform: {
             UIScrollView.appearance().bounces = true
