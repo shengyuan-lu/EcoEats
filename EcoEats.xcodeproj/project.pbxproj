@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,6 +12,7 @@
 		AFC2541C2646E8F100EE0470 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC2541B2646E8F100EE0470 /* Item.swift */; };
 		AFC254202646EC9400EE0470 /* content.json in Resources */ = {isa = PBXBuildFile; fileRef = AFC2541F2646EC9400EE0470 /* content.json */; };
 		AFDF3ED02646E4E4003CDB52 /* DataApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDF3ECF2646E4E4003CDB52 /* DataApp.swift */; };
+		F41E38142647E684000EEB6A /* BottomSheet in Frameworks */ = {isa = PBXBuildFile; productRef = F41E38132647E684000EEB6A /* BottomSheet */; };
 		F42587262647BCF500023A39 /* ShopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42587252647BCF500023A39 /* ShopView.swift */; };
 		F43239C42646DB3D0076C2B4 /* EcoEatsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43239C32646DB3D0076C2B4 /* EcoEatsApp.swift */; };
 		F43239C62646DB3D0076C2B4 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43239C52646DB3D0076C2B4 /* MainView.swift */; };
@@ -56,6 +57,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				93364858EA608ECFBC44C658 /* Pods_EcoEats.framework in Frameworks */,
+				F41E38142647E684000EEB6A /* BottomSheet in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,6 +213,9 @@
 			dependencies = (
 			);
 			name = EcoEats;
+			packageProductDependencies = (
+				F41E38132647E684000EEB6A /* BottomSheet */,
+			);
 			productName = EcoEats;
 			productReference = F43239C02646DB3D0076C2B4 /* EcoEats.app */;
 			productType = "com.apple.product-type.application";
@@ -238,6 +243,9 @@
 				Base,
 			);
 			mainGroup = F43239B72646DB3D0076C2B4;
+			packageReferences = (
+				F41E38122647E684000EEB6A /* XCRemoteSwiftPackageReference "BottomSheet" */,
+			);
 			productRefGroup = F43239C12646DB3D0076C2B4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -510,6 +518,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F41E38122647E684000EEB6A /* XCRemoteSwiftPackageReference "BottomSheet" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/LucasMucGH/BottomSheet";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.7;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F41E38132647E684000EEB6A /* BottomSheet */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F41E38122647E684000EEB6A /* XCRemoteSwiftPackageReference "BottomSheet" */;
+			productName = BottomSheet;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F43239B82646DB3D0076C2B4 /* Project object */;
 }

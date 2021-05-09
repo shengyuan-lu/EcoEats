@@ -7,55 +7,51 @@
 
 import SwiftUI
 import MapKit
+import BottomSheet
 
 struct ShopView: View {
-    
-    @State private var text: String = ""
     
     var body: some View {
         
         NavigationView {
             
-            ZStack {
+            VStack(alignment: .leading) {
+                
+                Text("Locate a EcoEats partnered Store.")
+                    .foregroundColor(.secondary)
+                    .padding(.horizontal, 16)
                 
                 MapView()
-                    .navigationBarTitle(Text("Find a Store"))
-                    .navigationBarTitleDisplayMode(.large)
-                
-                VStack {
-                    
-                    HStack {
-                        Image(systemName: "magnifyingglass")
-                            .foregroundColor(Color.init(hex: "54925A"))
-                            .font(.title)
-                            
-                        TextField("Search...", text: $text)
-                            .font(.title2)
-                            .foregroundColor(.black)
-                            .keyboardType(.default)
-                            .padding(10)
-                            .environment(\.colorScheme, .light)
-
+                    .onTapGesture {
+                        self.endEditing()
                     }
-                    .padding(.horizontal, 8)
-                    .padding(.vertical, 8)
-                    .background(Color.white)
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
-                    .padding()
-                    .shadow(radius: 5)
-                    
-                    Spacer()
-                    
-                }
-
-
+                
             }
-            .onTapGesture {
-                self.endEditing()
-            }
+            .navigationBarTitle(Text("Find a Store"))
+            .navigationBarTitleDisplayMode(.large)
+            .navigationBarItems(trailing:
+                                    
+                                    Button(action: {
+
+                                        
+                                    }, label: {
+                                        
+                                        HStack {
+                                            
+                                            
+                                            Text("My Cart")
+                                            
+                                            Image(systemName: "cart.fill")
+
+                                            
+                                        }
+                                        .padding(10)
+                                        .foregroundColor(Color.init(hex: "54925A"))
+                                        
+                                    })
+            )
+                                
         }
-
-
         
     }
     
@@ -70,34 +66,86 @@ struct MapView: View {
     @State var manager = CLLocationManager()
     @StateObject var managerDelegate = LocationDelegate()
     
+    @State private var text: String = ""
+    
+    @State var bottomSheetPosition: BottomSheetPosition = BottomSheetPosition.hidden
+    
     private var poi = [
-        AnnotatedItem(name: "VegiMart Irvine", coordinate: CLLocationCoordinate2D(latitude: 33.6570, longitude: -117.8316)),
-        AnnotatedItem(name: "VegiMart Irvine", coordinate: CLLocationCoordinate2D(latitude: 33.6590, longitude: -117.8216)),
-        AnnotatedItem(name: "VegiMart Irvine", coordinate: CLLocationCoordinate2D(latitude: 33.6570, longitude: -117.8316)),
-        AnnotatedItem(name: "VegiMart Irvine", coordinate: CLLocationCoordinate2D(latitude: 33.6300, longitude: -117.7996)),
-        AnnotatedItem(name: "VegiMart Irvine", coordinate: CLLocationCoordinate2D(latitude: 33.6469, longitude: -117.8630)),
+        AnnotatedItem(name: "VegiMart", coordinate: CLLocationCoordinate2D(latitude: 33.6570, longitude: -117.8016)),
+        AnnotatedItem(name: "HMart Irvine", coordinate: CLLocationCoordinate2D(latitude: 33.6570, longitude: -117.8316)),
+        AnnotatedItem(name: "FreshMart", coordinate: CLLocationCoordinate2D(latitude: 33.6300, longitude: -117.7996)),
+        AnnotatedItem(name: "Farmer's Choice", coordinate: CLLocationCoordinate2D(latitude: 33.6469, longitude: -117.8630)),
     ]
     
     var body:some View {
         VStack {
             
-            Map(coordinateRegion: $managerDelegate.region, interactionModes: .pan, showsUserLocation: true, userTrackingMode: $trackingMode, annotationItems: poi) { item in
-
-                MapAnnotation(coordinate: item.coordinate) {
-                    Image("Icon")
+            ZStack {
+                
+                Map(coordinateRegion: $managerDelegate.region, interactionModes: .pan, showsUserLocation: true, userTrackingMode: $trackingMode, annotationItems: poi) { item in
+                    
+                    MapAnnotation(coordinate: item.coordinate) {
+                        
+                        Button(action: {
+                            
+                            self.bottomSheetPosition = BottomSheetPosition.middle
+                            
+                        }, label: {
+                            
+                            Image(item.name)
+                                .resizable()
+                                .frame(width: 50, height: 50, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                                .foregroundColor(Color.init(hex: "54925A"))
+                            
+                        })
+                        
+                    }
                 }
+                
+                VStack {
+                    
+                    HStack {
+                        Image(systemName: "magnifyingglass")
+                            .foregroundColor(Color.init(hex: "54925A"))
+                            .font(.title2)
+                        
+                        TextField("Search...", text: $text)
+                            .font(.title2)
+                            .foregroundColor(.black)
+                            .keyboardType(.default)
+                            .environment(\.colorScheme, .light)
+                        
+                    }
+                    .padding(.horizontal, 16)
+                    .padding(.vertical, 8)
+                    .background(Color.white)
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                    .padding()
+                    .shadow(radius: 5)
+                    
+                    Spacer()
+                    
+                }
+                
+            }
+            .bottomSheet(bottomSheetPosition: $bottomSheetPosition) {
+                Text("Store Info Here")
+            }
+            .onAppear {
+                manager.delegate = managerDelegate
             }
             
+            
+
         }
-        .onAppear {
-            manager.delegate = managerDelegate
-        }
+        
+        
     }
 }
 
 class LocationDelegate: NSObject, ObservableObject, CLLocationManagerDelegate {
     
-    @Published var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 33.6846, longitude: -117.8265), span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
+    @Published var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 33.6846, longitude: -117.8265), span: MKCoordinateSpan(latitudeDelta: 0.09, longitudeDelta: 0.09))
     
     var updateCount = 0
     
