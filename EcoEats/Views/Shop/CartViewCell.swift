@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-struct CartCellCell: View {
+struct CartViewCell: View {
     
     @State var item: Item
     
     let cornerRadius: CGFloat = 10
-    let gReaderHeight: CGFloat = 100
+    let gReaderHeight: CGFloat = 120
     
     var body: some View {
         
@@ -36,7 +36,7 @@ struct CartCellCell: View {
                             .foregroundColor(.primary)
                             .lineLimit(2)
                         
-                        Text("You reduced your carbon footprint by \(item.percentage!)%")
+                        Text("This item is \(item.percentage!)% less in carbon footprint compare to similar products.")
                             .font(.body)
                             .foregroundColor(.secondary)
                             .fixedSize(horizontal: false, vertical: true)
@@ -61,11 +61,8 @@ struct CartCellCell: View {
                                 .lineLimit(3)
                         }
 
-                        
-                        
-
                     }
-                    .padding(.leading, 10)
+                    .padding(.horizontal, 10)
                 }
                 .cornerRadius(cornerRadius)
                 
@@ -80,6 +77,6 @@ struct CartCellCell: View {
 
 struct CartCellCell_Previews: PreviewProvider {
     static var previews: some View {
-        CartCellCell(item: Item(icon: "🥤", name: "Juice", percentage: 69, quanity: 1, price: 5.00))
+        CartViewCell(item: Item(icon: "🥤", name: "Juice", percentage: 69, quanity: 1, price: 5.00))
     }
 }

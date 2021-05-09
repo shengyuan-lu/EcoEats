@@ -11,6 +11,10 @@ import BottomSheet
 
 struct ShopView: View {
     
+    @State private var showCartView: Bool = false
+    
+    @Binding var selectionIndex: Int
+    
     var body: some View {
         
         NavigationView {
@@ -25,6 +29,9 @@ struct ShopView: View {
                     .onTapGesture {
                         self.endEditing()
                     }
+                    .sheet(isPresented: $showCartView, content: {
+                        CartView()
+                    })
                 
             }
             .navigationBarTitle(Text("Find a Store"))
@@ -33,17 +40,13 @@ struct ShopView: View {
                                     
                                     Button(action: {
 
+                                        self.showCartView.toggle()
                                         
                                     }, label: {
                                         
                                         HStack {
-                                            
-                                            
                                             Text("My Cart")
-                                            
                                             Image(systemName: "cart.fill")
-
-                                            
                                         }
                                         .padding(10)
                                         .foregroundColor(Color.init(hex: "54925A"))
@@ -181,6 +184,6 @@ struct AnnotatedItem: Identifiable {
 
 struct ShopView_Previews: PreviewProvider {
     static var previews: some View {
-        ShopView()
+        ShopView(selectionIndex: .constant(0))
     }
 }

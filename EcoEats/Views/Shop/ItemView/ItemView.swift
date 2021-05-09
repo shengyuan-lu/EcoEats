@@ -15,7 +15,6 @@ struct ItemView: View {
         
         VStack{
             
-            
             ScrollView(showsIndicators: false) {
 
                 VStack(alignment: .leading) {
@@ -72,7 +71,7 @@ struct ItemView: View {
             .navigationBarItems(trailing:
                                     Button(action: {
                                     }, label: {
-                                        NavigationLink(destination: ShopView()){
+                                        NavigationLink(destination: CheckoutSuccessView()){
                                             HStack {
                                                 Text("Next")
                                                 Image(systemName: "arrow.forward.circle.fill")
