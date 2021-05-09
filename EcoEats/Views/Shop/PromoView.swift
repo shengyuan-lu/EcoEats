@@ -22,7 +22,7 @@ struct PromoView: View {
                     Divider()
                         .padding(.vertical)
                     
-                    VStack(alignment: .leading, spacing: 10) {
+                    VStack(alignment: .leading) {
                         
                         Text("Shop Safe")
                             .font(.title2)
@@ -32,6 +32,7 @@ struct PromoView: View {
                         
                         Text("Make your order online and we'll prepare it. Then you can come and pick it up contactlessly.")
                             .foregroundColor(.secondary)
+                            .padding(.vertical, 10)
                         
                         ZStack {
                             Color.init(hex: "EDFFF3")
@@ -72,6 +73,7 @@ struct PromoView: View {
                         
                         Text("Support locally sourced foods that are both good for you and for the environement.")
                             .foregroundColor(.secondary)
+                            .padding(.vertical, 10)
                         
                         ZStack {
                             Color.init(hex: "EDFFF3")
@@ -113,6 +115,7 @@ struct PromoView: View {
                         
                         Text("If you're a market that's offering contactless shopping, register here!")
                             .foregroundColor(.secondary)
+                            .padding(.vertical, 10)
                         
                         ZStack {
                             Color.init(hex: "EDFFF3")
