@@ -6,7 +6,8 @@
 //
 
 import Foundation
-struct Store  {
+
+struct Store {
     var name : String?
     var time : String?
     var distances : Double?

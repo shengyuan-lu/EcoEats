@@ -12,7 +12,7 @@ import UIKit
 struct IntroductionView: View {
     
     @State private var introList = [
-        IntroPage(introText: "Find local businesses that offer contactless services (1/3).", introImageStr: "intro1", tag: 0),
+        IntroPage(introText: "Support local businesses that offer contactless services (1/3).", introImageStr: "intro1", tag: 0),
         
         IntroPage(introText: "Choose from sustainably sourced goodies (2/3).", introImageStr: "intro2", tag: 1),
         
@@ -20,8 +20,10 @@ struct IntroductionView: View {
     ]
     
     
-    @State private var selectedTab:Int = 0
+    @Binding var selectedTab: Int
     
+    @Binding var isLoggedin: Bool
+
     
     var body: some View {
         
@@ -31,7 +33,7 @@ struct IntroductionView: View {
                 
                 VStack(alignment: .leading) {
                     
-                    
+    
                     Text(self.selectedTab == introList.count ? "Enter your details to start ordering food." : "An introduction and guided tour to EcoEats.")
                         .foregroundColor(.secondary)
                         .padding(.horizontal, 16)
@@ -46,12 +48,12 @@ struct IntroductionView: View {
                         }
                         .padding(.horizontal, 16)
                         
-                        LoginView()
+                        LoginView(isLoggedin: $isLoggedin)
                             .tag(introList.count)
                         
                     }
                     .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
-                    .navigationBarTitle(Text(self.selectedTab == introList.count ? "Signup or Login" : "Welcome"))
+                    .navigationBarTitle(Text(self.selectedTab == introList.count ? "Sign up or Log in" : "Welcome"))
                     .navigationBarTitleDisplayMode(.large)
                     .navigationBarItems(trailing:
                                             
@@ -139,6 +141,6 @@ struct IntroPage: Hashable {
 
 struct IntroductionView_Previews: PreviewProvider {
     static var previews: some View {
-        IntroductionView()
+        IntroductionView(selectedTab: .constant(0), isLoggedin: .constant(true))
     }
 }

@@ -9,15 +9,14 @@ import Foundation
 import Combine
 import SwiftyJSON
 
-class DataApp : ObservableObject{
+class DataApp : ObservableObject {
     
     @Published var stores : [Store] = []
     @Published var cartItems : [Item] = []
     
-    init(){
+    init() {
         loadJson()
     }
-    
     
     func loadJson(){
         if let url = Bundle.main.url(forAuxiliaryExecutable: "content.json") {
