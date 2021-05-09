@@ -9,14 +9,15 @@ import Foundation
 import Combine
 import SwiftyJSON
 
-class DataApp : ObservableObject {
+class DataApp : ObservableObject{
     
     @Published var stores : [Store] = []
     @Published var cartItems : [Item] = []
     
-    init() {
+    init(){
         loadJson()
     }
+    
     
     func loadJson(){
         if let url = Bundle.main.url(forAuxiliaryExecutable: "content.json") {
@@ -38,7 +39,7 @@ class DataApp : ObservableObject {
                         item.icon = beverage["icon"].stringValue
                         item.percentage = beverage["percentage"].intValue
                         item.quanity = beverage["quantity"].intValue
-                        
+                        item.price = beverage["price"].doubleValue
                         store.beverages.append(item);
                     }
                     
@@ -48,7 +49,7 @@ class DataApp : ObservableObject {
                         item.icon = veggie["icon"].stringValue
                         item.percentage = veggie["percentage"].intValue
                         item.quanity = veggie["quantity"].intValue
-                        
+                        item.price = veggie["price"].doubleValue
                         store.veggies.append(item);
                     }
                     
@@ -58,7 +59,7 @@ class DataApp : ObservableObject {
                         item.icon = hygiene["icon"].stringValue
                         item.percentage = hygiene["percentage"].intValue
                         item.quanity = hygiene["quantity"].intValue
-                        
+                        item.price = hygiene["price"].doubleValue
                         store.hygienes.append(item);
                     }
                     

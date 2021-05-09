@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		93364858EA608ECFBC44C658 /* Pods_EcoEats.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B9A6B9FCE75930C13B3A437 /* Pods_EcoEats.framework */; };
-		AFC254182646E8E300EE0470 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC254172646E8E300EE0470 /* Store.swift */; };
-		AFC2541C2646E8F100EE0470 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC2541B2646E8F100EE0470 /* Item.swift */; };
-		AFC254202646EC9400EE0470 /* content.json in Resources */ = {isa = PBXBuildFile; fileRef = AFC2541F2646EC9400EE0470 /* content.json */; };
-		AFDF3ED02646E4E4003CDB52 /* DataApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDF3ECF2646E4E4003CDB52 /* DataApp.swift */; };
 		F41E38142647E684000EEB6A /* BottomSheet in Frameworks */ = {isa = PBXBuildFile; productRef = F41E38132647E684000EEB6A /* BottomSheet */; };
 		F41E381A2647F1AE000EEB6A /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41E38192647F1AE000EEB6A /* ProfileView.swift */; };
+		F41E381F2647F5CF000EEB6A /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41E381B2647F5CE000EEB6A /* Item.swift */; };
+		F41E38202647F5CF000EEB6A /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41E381C2647F5CF000EEB6A /* Store.swift */; };
+		F41E38212647F5CF000EEB6A /* content.json in Resources */ = {isa = PBXBuildFile; fileRef = F41E381D2647F5CF000EEB6A /* content.json */; };
+		F41E38222647F5CF000EEB6A /* DataApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41E381E2647F5CF000EEB6A /* DataApp.swift */; };
+		F41E382F2647F5FA000EEB6A /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41E38242647F5F9000EEB6A /* ItemView.swift */; };
+		F41E38302647F5FA000EEB6A /* ItemInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41E38252647F5F9000EEB6A /* ItemInfo.swift */; };
+		F41E38312647F5FA000EEB6A /* ItemCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41E38262647F5F9000EEB6A /* ItemCard.swift */; };
 		F42587262647BCF500023A39 /* ShopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42587252647BCF500023A39 /* ShopView.swift */; };
 		F43239C42646DB3D0076C2B4 /* EcoEatsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43239C32646DB3D0076C2B4 /* EcoEatsApp.swift */; };
 		F43239C62646DB3D0076C2B4 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43239C52646DB3D0076C2B4 /* MainView.swift */; };
@@ -32,11 +35,14 @@
 		12C38A2927AF88CA9CCB60B4 /* Pods-EcoEats.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EcoEats.release.xcconfig"; path = "Target Support Files/Pods-EcoEats/Pods-EcoEats.release.xcconfig"; sourceTree = "<group>"; };
 		1384DD835792A57D5A477B70 /* Pods-EcoEats.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EcoEats.debug.xcconfig"; path = "Target Support Files/Pods-EcoEats/Pods-EcoEats.debug.xcconfig"; sourceTree = "<group>"; };
 		1B9A6B9FCE75930C13B3A437 /* Pods_EcoEats.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EcoEats.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AFC254172646E8E300EE0470 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
-		AFC2541B2646E8F100EE0470 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
-		AFC2541F2646EC9400EE0470 /* content.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = content.json; sourceTree = "<group>"; };
-		AFDF3ECF2646E4E4003CDB52 /* DataApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataApp.swift; sourceTree = "<group>"; };
 		F41E38192647F1AE000EEB6A /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		F41E381B2647F5CE000EEB6A /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		F41E381C2647F5CF000EEB6A /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		F41E381D2647F5CF000EEB6A /* content.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = content.json; sourceTree = "<group>"; };
+		F41E381E2647F5CF000EEB6A /* DataApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataApp.swift; sourceTree = "<group>"; };
+		F41E38242647F5F9000EEB6A /* ItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
+		F41E38252647F5F9000EEB6A /* ItemInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemInfo.swift; sourceTree = "<group>"; };
+		F41E38262647F5F9000EEB6A /* ItemCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCard.swift; sourceTree = "<group>"; };
 		F42587252647BCF500023A39 /* ShopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopView.swift; sourceTree = "<group>"; };
 		F43239C02646DB3D0076C2B4 /* EcoEats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EcoEats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F43239C32646DB3D0076C2B4 /* EcoEatsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EcoEatsApp.swift; sourceTree = "<group>"; };
@@ -89,6 +95,16 @@
 				F41E38192647F1AE000EEB6A /* ProfileView.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		F41E38232647F5F9000EEB6A /* ItemView */ = {
+			isa = PBXGroup;
+			children = (
+				F41E38242647F5F9000EEB6A /* ItemView.swift */,
+				F41E38252647F5F9000EEB6A /* ItemInfo.swift */,
+				F41E38262647F5F9000EEB6A /* ItemCard.swift */,
+			);
+			path = ItemView;
 			sourceTree = "<group>";
 		};
 		F43239B72646DB3D0076C2B4 = {
@@ -155,10 +171,10 @@
 		F43239D42646DB850076C2B4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				AFC2541F2646EC9400EE0470 /* content.json */,
-				AFDF3ECF2646E4E4003CDB52 /* DataApp.swift */,
-				AFC254172646E8E300EE0470 /* Store.swift */,
-				AFC2541B2646E8F100EE0470 /* Item.swift */,
+				F41E381D2647F5CF000EEB6A /* content.json */,
+				F41E381E2647F5CF000EEB6A /* DataApp.swift */,
+				F41E381B2647F5CE000EEB6A /* Item.swift */,
+				F41E381C2647F5CF000EEB6A /* Store.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -190,6 +206,7 @@
 		F43239DA2646DC110076C2B4 /* Shop */ = {
 			isa = PBXGroup;
 			children = (
+				F41E38232647F5F9000EEB6A /* ItemView */,
 				F4C826E02647920D00517A03 /* MainShopView.swift */,
 				F4C826E42647AA9C00517A03 /* PromoView.swift */,
 				F42587252647BCF500023A39 /* ShopView.swift */,
@@ -274,7 +291,7 @@
 				F43239D72646DBA60076C2B4 /* Launch Screen.storyboard in Resources */,
 				F43239CB2646DB3F0076C2B4 /* Preview Assets.xcassets in Resources */,
 				F43239C82646DB3F0076C2B4 /* Assets.xcassets in Resources */,
-				AFC254202646EC9400EE0470 /* content.json in Resources */,
+				F41E38212647F5CF000EEB6A /* content.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,19 +344,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFC254182646E8E300EE0470 /* Store.swift in Sources */,
 				F41E381A2647F1AE000EEB6A /* ProfileView.swift in Sources */,
+				F41E38222647F5CF000EEB6A /* DataApp.swift in Sources */,
+				F41E38312647F5FA000EEB6A /* ItemCard.swift in Sources */,
 				F4C826E12647920D00517A03 /* MainShopView.swift in Sources */,
 				F43239DD2646DE200076C2B4 /* LoginView.swift in Sources */,
+				F41E38302647F5FA000EEB6A /* ItemInfo.swift in Sources */,
+				F41E38202647F5CF000EEB6A /* Store.swift in Sources */,
 				F4C826DF2646F07100517A03 /* UIScreenExtension.swift in Sources */,
 				F4C826DD2646E4F000517A03 /* HexColorExtension.swift in Sources */,
 				F4C826E52647AA9C00517A03 /* PromoView.swift in Sources */,
+				F41E381F2647F5CF000EEB6A /* Item.swift in Sources */,
 				F42587262647BCF500023A39 /* ShopView.swift in Sources */,
 				F43239C62646DB3D0076C2B4 /* MainView.swift in Sources */,
+				F41E382F2647F5FA000EEB6A /* ItemView.swift in Sources */,
 				F4C826DB2646E32C00517A03 /* IntroductionView.swift in Sources */,
 				F43239C42646DB3D0076C2B4 /* EcoEatsApp.swift in Sources */,
-				AFDF3ED02646E4E4003CDB52 /* DataApp.swift in Sources */,
-				AFC2541C2646E8F100EE0470 /* Item.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

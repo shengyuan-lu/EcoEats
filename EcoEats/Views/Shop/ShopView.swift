@@ -129,7 +129,8 @@ struct MapView: View {
                 
             }
             .bottomSheet(bottomSheetPosition: $bottomSheetPosition) {
-                Text("Store Info Here")
+                ItemView()
+                    .padding()
             }
             .onAppear {
                 manager.delegate = managerDelegate

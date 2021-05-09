@@ -6,9 +6,11 @@
 //
 
 import Foundation
-struct Item : Codable {
+struct Item : Codable,Identifiable {
+    let id = UUID()
     var icon : String?
     var name : String?
     var percentage : Int?
     var quanity : Int?
+    var price : Double?
 }
