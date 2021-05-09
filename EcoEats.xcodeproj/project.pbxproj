@@ -29,6 +29,7 @@
 		F4C826DF2646F07100517A03 /* UIScreenExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C826DE2646F07100517A03 /* UIScreenExtension.swift */; };
 		F4C826E12647920D00517A03 /* MainShopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C826E02647920D00517A03 /* MainShopView.swift */; };
 		F4C826E52647AA9C00517A03 /* PromoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C826E42647AA9C00517A03 /* PromoView.swift */; };
+		F4DAA006264802F6006385C3 /* CartViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DAA005264802F6006385C3 /* CartViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,7 @@
 		F4C826DE2646F07100517A03 /* UIScreenExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScreenExtension.swift; sourceTree = "<group>"; };
 		F4C826E02647920D00517A03 /* MainShopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainShopView.swift; sourceTree = "<group>"; };
 		F4C826E42647AA9C00517A03 /* PromoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoView.swift; sourceTree = "<group>"; };
+		F4DAA005264802F6006385C3 /* CartViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +212,7 @@
 				F4C826E02647920D00517A03 /* MainShopView.swift */,
 				F4C826E42647AA9C00517A03 /* PromoView.swift */,
 				F42587252647BCF500023A39 /* ShopView.swift */,
+				F4DAA005264802F6006385C3 /* CartViewCell.swift */,
 			);
 			path = Shop;
 			sourceTree = "<group>";
@@ -347,6 +350,7 @@
 				F41E381A2647F1AE000EEB6A /* ProfileView.swift in Sources */,
 				F41E38222647F5CF000EEB6A /* DataApp.swift in Sources */,
 				F41E38312647F5FA000EEB6A /* ItemCard.swift in Sources */,
+				F4DAA006264802F6006385C3 /* CartViewCell.swift in Sources */,
 				F4C826E12647920D00517A03 /* MainShopView.swift in Sources */,
 				F43239DD2646DE200076C2B4 /* LoginView.swift in Sources */,
 				F41E38302647F5FA000EEB6A /* ItemInfo.swift in Sources */,

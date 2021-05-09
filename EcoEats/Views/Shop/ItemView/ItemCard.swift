@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ItemCard: View {
+    
     @State var item : Item
     @State var showingSheet : Bool = false;
     
@@ -25,6 +26,12 @@ struct ItemCard: View {
                     .lineLimit(5)
                     .font(.subheadline)
                     .foregroundColor(.primary)
+                
+                Text("$ \(Double(item.price!), specifier: "%.2f")")
+                    .bold()
+                    .lineLimit(5)
+                    .font(.subheadline)
+                    .foregroundColor(.green)
             }
             .frame(width: 155)
             .padding(.leading, 15)

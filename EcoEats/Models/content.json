@@ -10,28 +10,28 @@
           "name": "Water",
           "percentage": 20,
           "quantity": 1,
-          "price" : 10.21
+          "price" : 2
         },
         {
           "icon": "🥤",
           "name": "Smoothie",
           "percentage": 69,
           "quantity": 1,
-          "price" : 20.21
+          "price" : 5
         },
         {
           "icon": "🍎",
           "name": "Apple",
           "percentage": 20,
           "quantity": 1,
-          "price" : 20.21
+          "price" : 10
         },
         {
           "icon": "🍊",
           "name": "Orange Juice",
           "percentage": 0,
           "quantity": 1,
-          "price" : 20.21
+          "price" : 1
         }
       ],
       "veggies": [
@@ -40,21 +40,21 @@
           "name": "Carrot",
           "percentage": 21,
           "quantity": 1,
-          "price" : 20.21
+          "price" : 1.5
         },
         {
           "icon": "🌽",
           "name": "Corn",
           "percentage": 24,
           "quantity": 1,
-          "price" : 20.21
+          "price" : 4
         },
         {
           "icon": "🧅",
           "name": "Onion",
           "percentage": 14,
           "quantity": 1,
-          "price" : 20.21
+          "price" : 6
         }
       ],
       "hygienes": [
@@ -63,7 +63,7 @@
           "name": "Toothbrush",
           "percentage": 11,
           "quantity": 1,
-          "price" : 20.21
+          "price" : 12
         }
       ]
     },
@@ -77,14 +77,14 @@
           "name": "Water",
           "percentage": 20,
           "quantity": 1,
-          "price" : 20.21
+          "price" : 20
         },
         {
           "icon": "🥤",
           "name": "Juice",
           "percentage": 69,
           "quantity": 1,
-          "price" : 20.21
+          "price" : 20
         }
       ],
       "veggies": [
@@ -93,21 +93,21 @@
           "name": "Carrot",
           "percentage": 21,
           "quantity": 1,
-          "price" : 20.21
+          "price" : 20
         },
         {
           "icon": "🌽",
           "name": "Corn",
           "percentage": 24,
           "quantity": 1,
-          "price" : 20.21
+          "price" : 20
         },
         {
           "icon": "🧅",
           "name": "Onion",
           "percentage": 14,
           "quantity": 1,
-          "price" : 20.21
+          "price" : 20
         }
       ],
       "hygienes": [
@@ -116,7 +116,7 @@
           "name": "Toothbrush",
           "percentage": 11,
           "quantity": 1,
-          "price" : 20.21
+          "price" : 20
         }
       ]
     },
@@ -131,14 +131,14 @@
           "name": "Water",
           "percentage": 20,
           "quantity": 1,
-          "price" : 20.21
+          "price" : 20
         },
         {
           "icon": "🥤",
           "name": "Juice",
           "percentage": 69,
           "quantity": 1,
-          "price" : 20.21
+          "price" : 20
         }
       ],
       "veggies": [
@@ -147,21 +147,21 @@
           "name": "Carrot",
           "percentage": 21,
           "quantity": 1,
-          "price" : 20.21
+          "price" : 20
         },
         {
           "icon": "🌽",
           "name": "Corn",
           "percentage": 24,
           "quantity": 1,
-          "price" : 20.21
+          "price" : 20
         },
         {
           "icon": "🧅",
           "name": "Onion",
           "percentage": 14,
           "quantity": 1,
-          "price" : 20.21
+          "price" : 20
         }
       ],
       "hygienes": [
@@ -170,7 +170,7 @@
           "name": "Toothbrush",
           "percentage": 11,
           "quantity": 1,
-          "price" : 20.21
+          "price" : 20
         }
       ]
     },
@@ -185,14 +185,14 @@
           "name": "Water",
           "percentage": 20,
           "quantity": 1,
-          "price" : 20.21
+          "price" : 20
         },
         {
           "icon": "🥤",
           "name": "Juice",
           "percentage": 69,
           "quantity": 1,
-          "price" : 20.21
+          "price" : 20
         }
       ],
       "veggies": [
@@ -201,21 +201,21 @@
           "name": "Carrot",
           "percentage": 21,
           "quantity": 1,
-          "price" : 20.21
+          "price" : 20
         },
         {
           "icon": "🌽",
           "name": "Corn",
           "percentage": 24,
           "quantity": 1,
-          "price" : 20.21
+          "price" : 20
         },
         {
           "icon": "🧅",
           "name": "Onion",
           "percentage": 14,
           "quantity": 1,
-          "price" : 20.21
+          "price" : 20
         }
       ],
       "hygienes": [
@@ -224,7 +224,7 @@
           "name": "Toothbrush",
           "percentage": 11,
           "quantity": 1,
-          "price" : 20.21
+          "price" : 20
         }
       ]
     },
@@ -239,14 +239,14 @@
           "name": "Water",
           "percentage": 20,
           "quantity": 1,
-          "price" : 20.21
+          "price" : 20
         },
         {
           "icon": "🥤",
           "name": "Juice",
           "percentage": 69,
           "quantity": 1,
-          "price" : 20.21
+          "price" : 20
         }
       ],
       "veggies": [
@@ -255,21 +255,21 @@
           "name": "Carrot",
           "percentage": 21,
           "quantity": 1,
-          "price" : 20.21
+          "price" : 20
         },
         {
           "icon": "🌽",
           "name": "Corn",
           "percentage": 24,
           "quantity": 1,
-          "price" : 20.21
+          "price" : 20
         },
         {
           "icon": "🧅",
           "name": "Onion",
           "percentage": 14,
           "quantity": 1,
-          "price" : 20.21
+          "price" : 20
         }
       ],
       "hygienes": [
@@ -278,7 +278,7 @@
           "name": "Toothbrush",
           "percentage": 11,
           "quantity": 1,
-          "price" : 20.21
+          "price" : 20
         }
       ]
     }

@@ -32,7 +32,7 @@ struct ItemInfo: View {
                     HStack(alignment: .center) {
                         Text("Quantity :")
                             .font(.title2)
-                            .fontWeight(.heavy)
+                            .fontWeight(.bold)
                         
                         Spacer()
                         
@@ -45,7 +45,7 @@ struct ItemInfo: View {
                     HStack(alignment: .firstTextBaseline){
                         Text("Price Per Item:")
                             .font(.title2)
-                            .fontWeight(.heavy)
+                            .fontWeight(.bold)
                         
                         Text("$\(Double(item.price!), specifier: "%.2f")")
                             .font(.title2)
@@ -65,10 +65,12 @@ struct ItemInfo: View {
                     }, label: {
                         HStack {
                             Text("Cancel")
+                            
                             Image(systemName: "xmark.circle.fill")
                             
                         }
-                        .padding(10)
+                        .font(.title2)
+                        .padding(16)
                         .background(Color.init(hex: "CC0000"))
                         .foregroundColor(.white)
                         .clipShape(RoundedRectangle(cornerRadius: 10))
@@ -85,10 +87,12 @@ struct ItemInfo: View {
                     }, label: {
                         HStack {
                             Text("Add to Cart")
+                            
                             Image(systemName: "cart.badge.plus")
                             
                         }
-                        .padding(10)
+                        .font(.title2)
+                        .padding(16)
                         .background(Color.init(hex: "54925A"))
                         .foregroundColor(.white)
                         .clipShape(RoundedRectangle(cornerRadius: 10))
