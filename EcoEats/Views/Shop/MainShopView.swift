@@ -23,7 +23,7 @@ struct MainShopView: View {
                     Label("Get Started", image: "ecology-leaf")
                 }
             
-            ShopView()
+            ShopView(selectionIndex: $tabSelection)
                 .tag(1)
                 .tabItem {
                     Label("Shop", image: "shop")
