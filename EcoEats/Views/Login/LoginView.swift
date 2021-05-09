@@ -51,8 +51,9 @@ struct LoginView: View {
                         .padding(10)
                         .overlay(
                             RoundedRectangle(cornerRadius: 8)
-                                .stroke(Color.secondary, lineWidth: 1))
+                                .stroke(Color.secondary, lineWidth: 2))
                         .background(Color.white)
+                        .environment(\.colorScheme, .light)
                     
                     HStack {
                         
@@ -70,9 +71,10 @@ struct LoginView: View {
                         .padding(10)
                         .overlay(
                             RoundedRectangle(cornerRadius: 8)
-                                .stroke(Color.secondary, lineWidth: 1)
+                                .stroke(Color.secondary, lineWidth: 2)
                         )
                         .background(Color.white)
+                        .environment(\.colorScheme, .light)
                 }
                 .padding()
                 .padding(.horizontal, 10)
