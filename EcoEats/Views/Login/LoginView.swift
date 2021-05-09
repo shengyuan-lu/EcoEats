@@ -107,7 +107,7 @@ struct LoginView: View {
                     }, label: {
                         
                         Text("Login")
-                            .font(.title2)
+                            .font(.title)
                             .fontWeight(.regular)
                             .padding(10)
                             .frame(maxWidth: .infinity)

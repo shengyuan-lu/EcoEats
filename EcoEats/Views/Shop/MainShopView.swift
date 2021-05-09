@@ -11,16 +11,20 @@ struct MainShopView: View {
     
     @Binding var isLoggedin:Bool
     
+    @State var tabSelection: Int = 0
+    
     var body: some View {
         
-        TabView {
+        TabView(selection: $tabSelection)  {
             
             PromoView(isLoggedin: $isLoggedin)
+                .tag(0)
                 .tabItem {
                     Label("Get Started", image: "ecology-leaf")
                 }
             
             ShopView()
+                .tag(1)
                 .tabItem {
                     Label("Shop", image: "shop")
                 }

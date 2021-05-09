@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "Farmer's Choice.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
