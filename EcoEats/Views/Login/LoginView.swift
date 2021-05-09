@@ -6,14 +6,18 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct LoginView: View {
     
-    @State private var email = ""
-    @State private var password = ""
+    @State private var email: String = ""
+    @State private var password: String = ""
+    @State private var showCantLogInAlert: Bool = false
+    @State private var showCantCreateAccAlert: Bool = false
+    
+    @Binding var isLoggedin:Bool
     
     var body: some View {
-        
         
         ZStack {
             
@@ -31,7 +35,6 @@ struct LoginView: View {
                 
                 VStack(alignment: .leading, spacing: 20) {
                     
-                    
                     HStack {
                         
                         Image(systemName: "envelope.fill")
@@ -43,14 +46,14 @@ struct LoginView: View {
                         
                     }
                     
-                    
-                    TextField("Enter your email address...", text: $email)
-                        .padding(10)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 8)
-                                .stroke(Color.secondary, lineWidth: 1))
-                    
-                    
+                    TextField("Enter your email address...", text: $email) {
+                        UIApplication.shared.endEditing()
+                    }
+                    .keyboardType(.emailAddress)
+                    .padding(10)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 8)
+                            .stroke(Color.secondary, lineWidth: 1))
                     
                     HStack {
                         
@@ -63,11 +66,14 @@ struct LoginView: View {
                         
                     }
                     
-                    SecureField("Enter your password...", text: $password)
-                        .padding(10)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 8)
-                                .stroke(Color.secondary, lineWidth: 1))
+                    SecureField("Enter your password...", text: $password) {
+                        UIApplication.shared.endEditing()
+                    }
+                    .keyboardType(.default)
+                    .padding(10)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 8)
+                            .stroke(Color.secondary, lineWidth: 1))
                 }
                 .padding()
                 .padding(.horizontal, 10)
@@ -77,6 +83,8 @@ struct LoginView: View {
                 VStack(alignment: .center, spacing: 20) {
                     
                     Button(action: {
+                        
+                        performAccCreation()
                         
                     }, label: {
                         
@@ -89,8 +97,13 @@ struct LoginView: View {
                             .foregroundColor(.white)
                             .clipShape(RoundedRectangle(cornerRadius: 20))
                     })
+                    .alert(isPresented: $showCantCreateAccAlert) {
+                        Alert(title: Text("Can't create your account"), message: Text("Email or password field empty!"), dismissButton: .cancel())
+                    }
                     
                     Button(action: {
+                        
+                        performLogin()
                         
                     }, label: {
                         
@@ -107,17 +120,49 @@ struct LoginView: View {
                     
                 }
                 .padding(30)
+                .alert(isPresented: $showCantLogInAlert) {
+                    Alert(title: Text("Incorrect Credentials"), message: Text("Check your email and password!"), dismissButton: .cancel())
+                }
             }
-            
-            
-            
+        }
+        .onTapGesture {
+            self.endEditing()
         }
     }
     
+    func performLogin() {
+        
+        if self.email.lowercased() == "me@tohacks.edu" && self.password.lowercased() == "12345" {
+            self.isLoggedin = true
+        } else {
+            self.showCantLogInAlert = true
+        }
+        
+    }
+    
+    func performAccCreation() {
+        if self.email != "" && self.password != "" {
+            self.isLoggedin = true
+        } else {
+            self.showCantCreateAccAlert = true
+        }
+    }
+    
+    private func endEditing() {
+        UIApplication.shared.endEditing()
+    }
+    
+    
+}
+
+extension UIApplication {
+    func endEditing() {
+        sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+    }
 }
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView()
+        LoginView(isLoggedin: .constant(false))
     }
 }

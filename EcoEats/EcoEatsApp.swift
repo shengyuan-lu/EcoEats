@@ -11,7 +11,7 @@ import SwiftUI
 struct EcoEatsApp: App {
     var body: some Scene {
         WindowGroup {
-            IntroductionView()
+            MainView()
         }
     }
 }
