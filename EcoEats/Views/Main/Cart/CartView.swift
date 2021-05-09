@@ -24,6 +24,7 @@ struct CartView: View {
                 Divider()
                 
                 VStack {
+                    
                     CartViewCell(item: item)
                         .navigationTitle("My Cart")
                     
@@ -36,7 +37,7 @@ struct CartView: View {
                     NavigationLink(
                         destination: CheckoutSuccessView(),
                         label: {
-                            Text("Checkout - Total $5.00")
+                            Text("Checkout - Total $\(Double(item.price!), specifier: "%.2f")")
                                 .font(.title)
                                 .fontWeight(.regular)
                                 .padding(10)

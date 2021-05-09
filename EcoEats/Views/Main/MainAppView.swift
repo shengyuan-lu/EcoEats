@@ -17,7 +17,7 @@ struct MainAppView: View {
         
         TabView(selection: $tabSelection)  {
             
-            PromoView(isLoggedin: $isLoggedin, tabSelection: $tabSelection)
+            OverView(isLoggedin: $isLoggedin, tabSelection: $tabSelection)
                 .tag(0)
                 .tabItem {
                     Label("Get Started", image: "ecology-leaf")

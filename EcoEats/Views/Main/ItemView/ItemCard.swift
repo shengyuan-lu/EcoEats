@@ -19,7 +19,7 @@ struct ItemCard: View {
                 
                 Image(uiImage: item.icon!.image(size: 60)!)
                     .clipped()
-                    .shadow(color: Color.black, radius: 5, x: 0, y: 0)
+                    .shadow(color: Color.black.opacity(0.5), radius: 5, x: 0, y: 0)
                 
                 Text(item.name!)
                     .bold()
@@ -27,8 +27,8 @@ struct ItemCard: View {
                     .font(.subheadline)
                     .foregroundColor(.primary)
                 
-                Text("$ \(Double(item.price!), specifier: "%.2f")")
-                    .bold()
+                Text("$\(Double(item.price!), specifier: "%.2f")")
+                    .fontWeight(.regular)
                     .lineLimit(5)
                     .font(.subheadline)
                     .foregroundColor(.green)

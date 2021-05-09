@@ -28,7 +28,7 @@
 		F4C826DD2646E4F000517A03 /* HexColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C826DC2646E4F000517A03 /* HexColorExtension.swift */; };
 		F4C826DF2646F07100517A03 /* UIScreenExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C826DE2646F07100517A03 /* UIScreenExtension.swift */; };
 		F4C826E12647920D00517A03 /* MainAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C826E02647920D00517A03 /* MainAppView.swift */; };
-		F4C826E52647AA9C00517A03 /* PromoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C826E42647AA9C00517A03 /* PromoView.swift */; };
+		F4C826E52647AA9C00517A03 /* OverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C826E42647AA9C00517A03 /* OverView.swift */; };
 		F4DAA006264802F6006385C3 /* CartViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DAA005264802F6006385C3 /* CartViewCell.swift */; };
 		F4DAA00826480923006385C3 /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DAA00726480923006385C3 /* CartView.swift */; };
 		F4DAA00A2648125A006385C3 /* CheckoutSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DAA0092648125A006385C3 /* CheckoutSuccessView.swift */; };
@@ -59,7 +59,7 @@
 		F4C826DC2646E4F000517A03 /* HexColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexColorExtension.swift; sourceTree = "<group>"; };
 		F4C826DE2646F07100517A03 /* UIScreenExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScreenExtension.swift; sourceTree = "<group>"; };
 		F4C826E02647920D00517A03 /* MainAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAppView.swift; sourceTree = "<group>"; };
-		F4C826E42647AA9C00517A03 /* PromoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoView.swift; sourceTree = "<group>"; };
+		F4C826E42647AA9C00517A03 /* OverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverView.swift; sourceTree = "<group>"; };
 		F4DAA005264802F6006385C3 /* CartViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewCell.swift; sourceTree = "<group>"; };
 		F4DAA00726480923006385C3 /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
 		F4DAA0092648125A006385C3 /* CheckoutSuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutSuccessView.swift; sourceTree = "<group>"; };
@@ -212,7 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				F4C826E02647920D00517A03 /* MainAppView.swift */,
-				F4C826E42647AA9C00517A03 /* PromoView.swift */,
+				F4C826E42647AA9C00517A03 /* OverView.swift */,
 				F42587252647BCF500023A39 /* ShopMapView.swift */,
 				F4DAA00B26481ACA006385C3 /* Cart */,
 				F41E38182647F15F000EEB6A /* Profile */,
@@ -373,7 +373,7 @@
 				F4DAA00A2648125A006385C3 /* CheckoutSuccessView.swift in Sources */,
 				F4C826DF2646F07100517A03 /* UIScreenExtension.swift in Sources */,
 				F4C826DD2646E4F000517A03 /* HexColorExtension.swift in Sources */,
-				F4C826E52647AA9C00517A03 /* PromoView.swift in Sources */,
+				F4C826E52647AA9C00517A03 /* OverView.swift in Sources */,
 				F41E381F2647F5CF000EEB6A /* Item.swift in Sources */,
 				F42587262647BCF500023A39 /* ShopMapView.swift in Sources */,
 				F43239C62646DB3D0076C2B4 /* MainView.swift in Sources */,

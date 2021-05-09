@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct PromoView: View {
+struct OverView: View {
     
     @Binding var isLoggedin: Bool
     
@@ -54,14 +54,23 @@ struct PromoView: View {
                             
                         }, label: {
                             
-                            Text("Shop Now")
-                                .font(.title2)
-                                .fontWeight(.regular)
-                                .padding(10)
-                                .frame(maxWidth: .infinity)
-                                .background(Color.init(hex: "54925A"))
-                                .foregroundColor(.white)
-                                .clipShape(RoundedRectangle(cornerRadius: 10))
+                            HStack {
+                                
+                                Image(systemName: "cart.fill")
+                                
+                                
+                                Text("Shop Now")
+                                    .font(.title2)
+                                    .fontWeight(.regular)
+
+                                
+                            }
+                            .padding(10)
+                            .frame(maxWidth: .infinity)
+                            .background(Color.init(hex: "54925A"))
+                            .foregroundColor(.white)
+                            .clipShape(RoundedRectangle(cornerRadius: 10))
+                            
 
                         })
                         .padding(.vertical)
@@ -98,14 +107,20 @@ struct PromoView: View {
                             
                         }, label: {
                             
-                            Text("Find Sustainable Options")
-                                .font(.title2)
-                                .fontWeight(.regular)
-                                .padding(10)
-                                .frame(maxWidth: .infinity)
-                                .background(Color.init(hex: "54925A"))
-                                .foregroundColor(.white)
-                                .clipShape(RoundedRectangle(cornerRadius: 10))
+                            HStack {
+                                
+                                Image("ecology-leaf")
+                                
+                                Text("Find Sustainable Options")
+                                    .font(.title2)
+                                    .fontWeight(.regular)
+
+                            }
+                            .padding(10)
+                            .frame(maxWidth: .infinity)
+                            .background(Color.init(hex: "54925A"))
+                            .foregroundColor(.white)
+                            .clipShape(RoundedRectangle(cornerRadius: 10))
 
                         })
                         .padding(.vertical)
@@ -143,15 +158,21 @@ struct PromoView: View {
                             
                         }, label: {
                             
-                            Text("Register Now")
-                                .font(.title2)
-                                .fontWeight(.regular)
-                                .padding(10)
-                                .frame(maxWidth: .infinity)
-                                .background(Color.init(hex: "54925A"))
-                                .foregroundColor(.white)
-                                .clipShape(RoundedRectangle(cornerRadius: 10))
+                            HStack {
+                                
+                                Image(systemName: "figure.wave")
+                                
+                                Text("Register Now")
+                                    .font(.title2)
+                                    .fontWeight(.regular)
 
+                            }
+                            .padding(10)
+                            .frame(maxWidth: .infinity)
+                            .background(Color.init(hex: "54925A"))
+                            .foregroundColor(.white)
+                            .clipShape(RoundedRectangle(cornerRadius: 10))
+                            
                         })
                         .padding(.vertical)
 
@@ -191,8 +212,8 @@ struct PromoView: View {
 
 
 
-struct PromoView_Previews: PreviewProvider {
+struct OverView_Previews: PreviewProvider {
     static var previews: some View {
-        PromoView(isLoggedin: .constant(true), tabSelection: .constant(0))
+        OverView(isLoggedin: .constant(true), tabSelection: .constant(0))
     }
 }
