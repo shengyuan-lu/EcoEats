@@ -6,6 +6,7 @@
 //
 
 import Foundation
+
 struct Store {
     var name : String?
     var time : String?

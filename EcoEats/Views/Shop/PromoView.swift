@@ -17,10 +17,13 @@ struct PromoView: View {
             
             ScrollView {
                 
-                VStack {
+                VStack(alignment: .leading) {
                     
+                    Text("Your journey with EcoEat starts here.")
+                        .foregroundColor(.secondary)
+
                     Divider()
-                        .padding(.vertical)
+                        .padding(.vertical, 10)
                     
                     VStack(alignment: .leading) {
                         
