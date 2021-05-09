@@ -153,9 +153,7 @@ struct PromoView: View {
                                             
                                         }
                                         .padding(10)
-                                        .background(Color.init(hex: "54925A"))
-                                        .foregroundColor(.white)
-                                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                                        .foregroundColor(Color.init(hex: "54925A"))
                                         
                                     })
             )

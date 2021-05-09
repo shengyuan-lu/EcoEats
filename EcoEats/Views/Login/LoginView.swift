@@ -90,7 +90,7 @@ struct LoginView: View {
                         
                         Text("Create an account")
                             .font(.title)
-                            .fontWeight(.bold)
+                            .fontWeight(.regular)
                             .padding(10)
                             .frame(maxWidth: .infinity)
                             .background(Color.init(hex: "54925A"))
@@ -108,7 +108,7 @@ struct LoginView: View {
                         
                         Text("Login")
                             .font(.title2)
-                            .fontWeight(.semibold)
+                            .fontWeight(.regular)
                             .padding(10)
                             .frame(maxWidth: .infinity)
                             .foregroundColor(Color.init(hex: "54925A"))
