@@ -64,13 +64,13 @@ struct PromoView: View {
                     
                     VStack(alignment: .leading, spacing: 10) {
                         
-                        Text("Shop Sustainable Foods")
+                        Text("Purchase Sustainable Foods")
                             .font(.title2)
                             .fontWeight(.bold)
                             .foregroundColor(Color.init(hex: "54925A"))
                         
                         
-                        Text("Purchase locally sourced foods that are both good for you and for the environement.")
+                        Text("Support locally sourced foods that are both good for you and for the environement.")
                             .foregroundColor(.secondary)
                         
                         ZStack {
@@ -113,6 +113,15 @@ struct PromoView: View {
                         
                         Text("If you're a market that's offering contactless shopping, register here!")
                             .foregroundColor(.secondary)
+                        
+                        ZStack {
+                            Color.init(hex: "EDFFF3")
+                                .clipShape(RoundedRectangle(cornerRadius: 25))
+                            
+                            Image("regshop")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                        }
                         
                         Button(action: {
                             
