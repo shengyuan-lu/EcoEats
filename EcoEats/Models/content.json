@@ -13,7 +13,19 @@
         },
         {
           "icon": "🥤",
-          "name": "Juice",
+          "name": "Smoothie",
+          "percentage": 69,
+          "quantity": 21
+        },
+        {
+          "icon": "🍎",
+          "name": "Apple",
+          "percentage": 20,
+          "quantity": 50
+        },
+        {
+          "icon": "🍊",
+          "name": "Orange Juice",
           "percentage": 69,
           "quantity": 21
         }

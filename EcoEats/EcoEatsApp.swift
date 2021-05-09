@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct EcoEatsApp: App {
+    @StateObject var data : DataApp = DataApp()
     var body: some Scene {
         WindowGroup {
-            IntroductionView()
+            TabController()
+                .environmentObject(data)
         }
     }
 }

@@ -9,7 +9,24 @@ import SwiftUI
 
 struct ShopView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            VStack{
+                List{
+                    HStack{
+                        VStack(alignment: .leading, spacing: 10){
+                            Text("Find a Store")
+                                .bold()
+                                .underline()
+                            Text("Enter your zipcode to find store near you!")
+                                .fontWeight(.thin)
+                                .bold()
+                        }
+                        Image("24Hr")
+                    }
+                    
+                }
+            }.navigationBarTitle(Text("Nearest Store"))
+        }
     }
 }
 
