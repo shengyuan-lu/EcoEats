@@ -24,7 +24,6 @@ struct IntroductionView: View {
     
     @Binding var isLoggedin: Bool
 
-    
     var body: some View {
         
         NavigationView {
@@ -33,7 +32,6 @@ struct IntroductionView: View {
                 
                 VStack(alignment: .leading) {
                     
-    
                     Text(self.selectedTab == introList.count ? "Enter your details to start ordering food." : "An introduction and guided tour to EcoEats.")
                         .foregroundColor(.secondary)
                         .padding(.horizontal, 16)

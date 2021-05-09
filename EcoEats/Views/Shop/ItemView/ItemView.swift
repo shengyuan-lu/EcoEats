@@ -15,7 +15,8 @@ struct ItemView: View {
         
         VStack{
             
-            ScrollView {
+            
+            ScrollView(showsIndicators: false) {
 
                 VStack(alignment: .leading) {
                     VStack(alignment: .leading){

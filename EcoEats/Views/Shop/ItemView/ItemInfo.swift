@@ -14,65 +14,91 @@ struct ItemInfo: View {
     @EnvironmentObject var dataApp : DataApp
     
     var body: some View {
+        
         NavigationView  {
-            VStack(alignment: .center){
-                Image(uiImage: item.icon!.image(size: 200)!)
+            
+            VStack {
                 
-                List{
-                    HStack(alignment: .firstTextBaseline){
+                Image(uiImage: item.icon!.image(size: 200)!)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 250, height: 250, alignment: .top)
+                    .background(Color.white)
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                    .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
+                
+                VStack(alignment: .leading) {
+                    
+                    HStack(alignment: .center) {
                         Text("Quantity :")
                             .font(.title2)
                             .fontWeight(.heavy)
+                        
                         Spacer()
+                        
                         TextField("Quantity", value: $item.quanity, formatter: NumberFormatter())
                             .font(.title2)
                         
                     }
+                    .foregroundColor(.primary)
                     
                     HStack(alignment: .firstTextBaseline){
                         Text("Price Per Item:")
                             .font(.title2)
                             .fontWeight(.heavy)
+                        
                         Text("$\(Double(item.price!), specifier: "%.2f")")
                             .font(.title2)
                     }
                     
-                    HStack{
-                        Button(action: {
-                            isPresented = false;
-                        }, label: {
-                            HStack {
-                                Text("Cancel")
-                                Image(systemName: "xmark.circle.fill")
-                                
-                            }
-                            .padding(10)
-                            .background(Color.init(hex: "CC0000"))
-                            .foregroundColor(.white)
-                            .clipShape(RoundedRectangle(cornerRadius: 10))
-                            
-                        })
-                        Spacer()
-                        Button(action: {
-                            dataApp.cartItems.append(item)
-                            print("\(dataApp.cartItems)")
-                            isPresented = false;
-                        }, label: {
-                            HStack {
-                                Text("Add to Cart")
-                                Image(systemName: "cart.badge.plus")
-                                
-                            }
-                            .padding(10)
-                            .background(Color.init(hex: "54925A"))
-                            .foregroundColor(.white)
-                            .clipShape(RoundedRectangle(cornerRadius: 10))
-                            
-                        })
-                    }
+                    .foregroundColor(.primary)
+                    
+                    
                 }
-            }.navigationBarTitle(Text("\(item.name!)"))
-            .hasScrollEnabled(false)
+                .padding()
+                .padding(.top, 60)
+                .navigationBarTitle(Text("\(item.name!)"))
+                
+                HStack {
+                    Button(action: {
+                        isPresented = false;
+                    }, label: {
+                        HStack {
+                            Text("Cancel")
+                            Image(systemName: "xmark.circle.fill")
+                            
+                        }
+                        .padding(10)
+                        .background(Color.init(hex: "CC0000"))
+                        .foregroundColor(.white)
+                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                        
+                    })
+                    
+                    Spacer()
+                    
+                    Button(action: {
+                        dataApp.cartItems.append(item)
+                        print("\(dataApp.cartItems)")
+                        isPresented = false;
+                        
+                    }, label: {
+                        HStack {
+                            Text("Add to Cart")
+                            Image(systemName: "cart.badge.plus")
+                            
+                        }
+                        .padding(10)
+                        .background(Color.init(hex: "54925A"))
+                        .foregroundColor(.white)
+                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                        
+                    })
+                    
+                }
+                .padding()
+            }
+
             
         }
     }
