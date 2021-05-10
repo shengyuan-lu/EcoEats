@@ -11,7 +11,7 @@
 * 🗣 Take surveys and gain points on the taste, packaging, views on these sustainably produced products to help companies make these healthy options more appealing to the world.
 * 📊 Lastly, profile view. To show you your weekly grocery overview: how many items were locally produced, seasonal products, your lowest and highest carbon footprint product. It will also contain a graph with your yearly carbon footprint by month and then the current month your in with days.
 
-## 📸 Demo Video
+## 🎥 Demo Video
 You can watch a demo video on my YouTube channel below.
 
 [![EcoEats Demo](http://img.youtube.com/vi/xsVts9labLM/0.jpg)](https://www.youtube.com/watch?v=xsVts9labLM "EcoEats Demo")
