@@ -139,7 +139,6 @@
 				F43239C32646DB3D0076C2B4 /* EcoEatsApp.swift */,
 				F43239D22646DB620076C2B4 /* Views */,
 				F43239D42646DB850076C2B4 /* Models */,
-				F43239D82646DBFD0076C2B4 /* View Models */,
 				F43239D52646DB8D0076C2B4 /* Resources */,
 				F43239D32646DB720076C2B4 /* Launch Screen */,
 				F43239DB2646DC1C0076C2B4 /* Helpers */,
@@ -192,13 +191,6 @@
 				F43239C72646DB3F0076C2B4 /* Assets.xcassets */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		F43239D82646DBFD0076C2B4 /* View Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "View Models";
 			sourceTree = "<group>";
 		};
 		F43239D92646DC0C0076C2B4 /* Login */ = {
